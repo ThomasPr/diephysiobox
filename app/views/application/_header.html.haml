@@ -1,0 +1,24 @@
+%header
+  .top-bar
+  %nav.navbar.navbar-expand-md
+    %span.navbar-brand
+      = link_to root_path do
+        = image_tag "crossfitbewegt"
+    %button.navbar-toggler.ml-auto{"aria-controls" => "navbarCollapse", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarCollapse", "data-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+
+
+    #navbarCollapse.collapse.navbar-collapse
+      %ul.navbar-nav.ml-auto
+
+        %li.nav-item{class: ('active' if page_path == '/home')}
+          = link_to "Home", page_path("home"), class: "nav-link"
+
+        %li.nav-item{class: ('active' if page_path == '/therapien')}
+          = link_to "Therapien", page_path("therapien"), class: "nav-link"
+
+        %li.nav-item{class: ('active' if page_path == '/team')}
+          = link_to "Team", page_path("team"), class: "nav-link"
+
+        %li.nav-item{class: ('active' if page_path == '/kontakt')}
+          = link_to "Kontakt", page_path("kontakt"), class: "nav-link"
