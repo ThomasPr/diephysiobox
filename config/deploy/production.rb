@@ -7,6 +7,8 @@
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
+server "cfb-physio.de", user: "cfb-physio", roles: %w(app db web)
+set :deploy_to, "/home/cfb-physio/"
 
 
 # role-based syntax
