@@ -8,8 +8,8 @@
     %meta{property: "og:url", content: url_for(only_path: false)}
     %meta{property: "og:title", content: content_for?(:title) ? "#{content_for(:title)} • CFB Physio" : "CFB Physio"}
     %meta{property: "og:image", content: image_url("og_image.jpg")}
-    = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application', defer: true
+    = inline_css 'application.css'
+    = inline_js 'application.css'
     = favicon_link_tag "favicon.png", type: "image/png"
 
   %body
