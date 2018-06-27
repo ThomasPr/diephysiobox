@@ -29,5 +29,15 @@ module CfbPhysio
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Disable cookies, we don't use them here
+    config.middleware.delete ActionDispatch::Cookies
+    config.middleware.delete ActionDispatch::Session::CookieStore
+
+    # Enable flash messages, these will be on the request since we're not using sessions
+    config.middleware.use ActionDispatch::Flash
+
+    # No session, so don't bother with CSRF tokens
+    config.action_controller.allow_forgery_protection = false
   end
 end
