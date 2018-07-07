@@ -1,0 +1,33 @@
+- content_for(:title, "Kontakt")
+
+#kontakt
+
+  .container
+    %h1 Kontakt
+
+    .row
+      .col-md-7.mb-5
+        #kontakt-map
+
+      .col-md-5.mb-5
+        #kontakt-form
+          = bootstrap_form_for(@kontakt, url: kontakt_path) do |f|
+            = f.text_field  :name,    label: fa_icon("user",     text: "Name")
+            = f.email_field :email,   label: fa_icon("envelope", text: "E-Mail Adresse")
+            = f.text_field  :subject, label: fa_icon("comment",  text: "Betreff")
+            = f.text_area   :message, label: fa_icon("pencil",   text: "Nachricht"), rows: 6
+            .form-group
+              - if @kontakt.delivered
+                .confirm Vielen Dank für Ihre Nachricht!
+              - else
+                = f.submit "Absenden", class: "submit"
+
+
+  :javascript
+    window.loadKontaktMap = function() {
+      var position = new google.maps.LatLng(48.134,11.523592);
+      var map = new google.maps.Map(document.getElementById('kontakt-map'), { zoom: 14, center: position });
+      var marker = new google.maps.Marker({ title: 'CrossFitBewegt', position: position, map: map });
+    };
+
+  = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyBC7IgkmHJLl7C42c1_KWBHBYouPXLNBxs&callback=loadKontaktMap'

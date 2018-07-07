@@ -62,3 +62,5 @@ gem 'bootstrap', '~> 4.1.1'
 gem "haml-rails", "~> 1.0"
 gem 'high_voltage', '~> 3.1'
 gem "font-awesome-rails"
+gem "bootstrap_form", ">= 4.0.0.alpha1"
+gem 'rails-i18n'
