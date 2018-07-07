@@ -10,13 +10,30 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- * *= require_tree .
- * *= require_self
  */
 
 
 @import "bootstrap"
 @import "font-awesome"
+
+$dark-green: rgb(0, 128, 0)
+$medium-green: rgb(48, 176, 48)
+$light-green: rgb(96, 224, 96)
+
+
+@import "team"
+
+#top-teaser
+  background-image: url(asset_path("teaser.jpg"))
+  background-position: center center
+  background-size: cover
+  width: 100%
+  height: 240px
+
+h1
+  border-bottom: 1px solid $medium-green
+  font-size: 3rem
+  margin-top: 1rem
 
 
 
@@ -27,7 +44,7 @@ body
 
 
 .top-bar
-  background-color: green
+  background-color: $medium-green
   height: 50px
 
 
@@ -36,14 +53,14 @@ nav
     padding: 15px !important
     font-weight: 500
     font-size: 1.3rem
-    color: green
+    color: $dark-green
     text-align: right
 
   .active .nav-link, a.nav-link:hover, a.nav-link:active
-      color: rgb(0, 192, 0)
+      color: $light-green
 
   .navbar-toggler
-    background-color: green
+    background-color: $dark-green
     color: rgba(255, 255, 255, 0.5)
     border-color: rgba(255, 255, 255, 0.1)
 
@@ -78,7 +95,7 @@ nav
 
 
 footer
-  background-color: green
+  background-color: $dark-green
   color: white
   padding-bottom: 1rem
   padding-top: 1rem
@@ -97,6 +114,6 @@ footer
 
     i.fa
       margin-right: 0.3em
-      color: rgb(0, 192, 0)
+      color: $light-green
       width: 14px
 
