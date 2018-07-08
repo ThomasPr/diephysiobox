@@ -1,0 +1,46 @@
+- content_for(:title, "Impressum")
+
+
+#impressum
+  .container
+    .row
+      .col
+        %h1 Impressum
+
+        %dl.dl-vertical
+          %dt Betreiber:
+          %dd{itemprop: "name legalName"} CrossFitBewegt GmbH
+
+          %dt Geschäftsführer:
+          %dd{itemprop: "founder"} Christoph Reiner, Aline Vogt
+
+          %dt Hausanschrift:
+
+          %dd
+            %address{itemprop: "address", itemscope: true, itemtype: "http://schema.org/PostalAddress"}
+              %span{itemprop: "name"} CrossFitBewegt GmbH
+              %br/
+              %span{itemprop: "streetAddress"} Westendstrasse 185
+              %br/
+              %span{itemprop: "postalCode"} D-80686
+              %span{itemprop: "addressLocality"} München
+
+        %dl.dl-horizontal
+          %dt Tel.:
+          %dd{itemprop: "telephone"} +49 (89) 95493710
+          %dt Fax:
+          %dd{itemprop: "faxNumber"} +49 (89) 95493619
+          %dt E-Mail:
+          %dd{itemprop: "email"} info@crossfitbewegt.com
+
+        %dl.dl-horizontal
+          %dt Registergericht:
+          %dd München
+          %dt Registernummer:
+          %dd HRB 212419
+          %dt Ust-ID-Nr.:
+          %dd DE 14312711584
+
+        %p Für Ihren Komfort bietet unsere SEITE Links zu anderen Seiten. Wenn Sie auf einen der Links klicken, verlassen Sie unsere Seite und betreten eine andere Seite. Wir sind nicht verantwortlich für die Inhalte verlinkter Drittseiten oder Hyperlinks, die sich auf verlinkten Drittseiten befinden.
+
+        %link{itemprop: "url", href: root_url}

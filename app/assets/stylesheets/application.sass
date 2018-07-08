@@ -23,6 +23,7 @@ $light-green: rgb(96, 224, 96)
 
 @import "team"
 @import "kontakt"
+@import "datenschutz"
 
 #top-teaser
   background-image: url(asset_path("teaser.jpg"))
@@ -41,7 +42,6 @@ h1
 body
   color: #5a5a5a
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-
 
 
 .top-bar
@@ -98,13 +98,14 @@ nav
 footer
   background-color: $dark-green
   color: white
+  font-weight: 300
   padding-bottom: 1rem
-  padding-top: 1rem
+  padding-top: 2rem
 
   a, a:hover, a:active
     color: white
 
-  address
+  .address
     font-weight: 300
     line-height: 1.75
 
@@ -117,4 +118,10 @@ footer
       margin-right: 0.3em
       color: $light-green
       width: 14px
+
+  .links
+    display: flex
+    align-items: flex-end
+    justify-content: flex-end
+    text-align: right
 

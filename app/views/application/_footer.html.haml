@@ -1,19 +1,24 @@
 %footer
   .container
-    %p
-      %address
+    .row
+      .col.address
+        %address
+          %ul.list-unstyled
+            %li
+              .main CrossFitBewegt Gmbh
+            %li
+              = fa_icon "map-marker"
+              Westendstraße 185
+            %li
+              = fa_icon "invalid"
+              80686 München
+            %li
+              = fa_icon "phone"
+              (089) 95 49 37 10
+            %li
+              = fa_icon "envelope"
+              = mail_to "info@crossfitbewegt.com"
+      .col.links
         %ul.list-unstyled
-          %li
-            .main CrossFitBewegt Gmbh
-          %li
-            = fa_icon "map-marker"
-            Westendstraße 185
-          %li
-            = fa_icon "invalid"
-            80686 München
-          %li
-            = fa_icon "phone"
-            (089) 95 49 37 10
-          %li
-            = fa_icon "envelope"
-            = mail_to "info@crossfitbewegt.com"
+          %li= link_to "Impressum", page_path("impressum")
+          %li= link_to "Datenschutz", page_path("datenschutz")
