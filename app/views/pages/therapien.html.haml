@@ -1,6 +1,67 @@
 - content_for(:title, "Therapien")
 
-#top-teaser
+#therapien
 
-.container
-  %h1 Therapien
+  .container
+    %img.d-block.w-100{:alt => "Generic placeholder image", "src" => "https://via.placeholder.com/930x465"}/
+
+    %h1 Therapien
+
+    %nav.nav.justify-content-center
+      %a.nav-link{href: "#therapie1"} Therapie 1
+      %a.nav-link{href: "#therapie2"} Therapie 2
+      %a.nav-link{href: "#therapie3"} Therapie 3
+      %a.nav-link{href: "#therapie4"} Therapie 4
+      %a.nav-link{href: "#therapie5"} Therapie 5
+
+    %hr.featurette-divider/
+
+    .row.featurette#therapie1
+      .col-md-7
+        %h2.featurette-heading
+          Therapie 1
+        %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      .col-md-5
+        %img.featurette-image.img-fluid.mx-auto{:alt => "Generic placeholder image", "src" => "https://via.placeholder.com/500x250"}/
+
+    %hr.featurette-divider/
+
+    .row.featurette#therapie2
+      .col-md-7.order-md-2
+        %h2.featurette-heading
+          Therapie 2
+          %span.text-muted See for yourself.
+        %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      .col-md-5.order-md-1
+        %img.featurette-image.img-fluid.mx-auto{:alt => "Generic placeholder image", "src" => "https://via.placeholder.com/500x250"}/
+
+    %hr.featurette-divider/
+
+    .row.featurette#therapie3
+      .col-md-7
+        %h2.featurette-heading
+          Therapie 3
+          %span.text-muted Checkmate.
+        %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      .col-md-5
+        %img.featurette-image.img-fluid.mx-auto{:alt => "Generic placeholder image", "src" => "https://via.placeholder.com/500x250"}/
+
+    %hr.featurette-divider/
+
+    .row.featurette#therapie4
+      .col-md-7.order-md-2
+        %h2.featurette-heading
+          Therapie 4
+        %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      .col-md-5.order-md-1
+        %img.featurette-image.img-fluid.mx-auto{:alt => "Generic placeholder image", "src" => "https://via.placeholder.com/500x250"}/
+
+    %hr.featurette-divider/
+
+    .row.featurette#therapie5
+      .col-md-7
+        %h2.featurette-heading
+          Therapie 5
+        %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      .col-md-5
+        %img.featurette-image.img-fluid.mx-auto{:alt => "Generic placeholder image", "src" => "https://via.placeholder.com/500x250"}/
