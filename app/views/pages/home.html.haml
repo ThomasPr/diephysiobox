@@ -1,55 +1,54 @@
-%main{role: "main"}
-  #myCarousel.carousel.carousel-fade.slide{"data-ride" => "carousel"}
-    .carousel-inner
-      .carousel-item.active
-        %img.d-block.w-100{:alt => "Third slide", :src => "https://via.placeholder.com/1600x800"}/
+%main#home{role: "main"}
 
 
-  .container.marketing
+
+  .container
+
+    #carouselExampleIndicators.carousel.slide{"data-ride" => "carousel"}
+      %ol.carousel-indicators
+        %li.active{"data-slide-to" => "0", "data-target" => "#carouselExampleIndicators"}
+        %li{"data-slide-to" => "1", "data-target" => "#carouselExampleIndicators"}
+        %li{"data-slide-to" => "2", "data-target" => "#carouselExampleIndicators"}
+        %li{"data-slide-to" => "3", "data-target" => "#carouselExampleIndicators"}
+        %li{"data-slide-to" => "4", "data-target" => "#carouselExampleIndicators"}
+      .carousel-inner
+        .carousel-item.active
+          = image_tag "slider/slider1.jpg", class: "d-block w-100"
+        .carousel-item
+          = image_tag "slider/slider2.jpg", class: "d-block w-100"
+        .carousel-item
+          = image_tag "slider/slider3.jpg", class: "d-block w-100"
+        .carousel-item
+          = image_tag "slider/slider4.jpg", class: "d-block w-100"
+        .carousel-item
+          = image_tag "slider/slider5.jpg", class: "d-block w-100"
+      %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleIndicators", :role => "button"}
+        %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+        %span.sr-only Previous
+      %a.carousel-control-next{"data-slide" => "next", :href => "#carouselExampleIndicators", :role => "button"}
+        %span.carousel-control-next-icon{"aria-hidden" => "true"}
+        %span.sr-only Next
+
+
     .row
-      .col-lg-4
-        %img.rounded-circle{src: "https://via.placeholder.com/140x140", height: "140", width: "140"}/
-        %h2 Heading
-        %p Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
-        %p
-          %a.btn.btn-secondary{:href => "#", :role => "button"} View details »
-      .col-lg-4
-        %img.rounded-circle{src: "https://via.placeholder.com/140x140", height: "140", width: "140"}/
-        %h2 Heading
-        %p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
-        %p
-          %a.btn.btn-secondary{:href => "#", :role => "button"} View details »
-      .col-lg-4
-        %img.rounded-circle{src: "https://via.placeholder.com/140x140", height: "140", width: "140"}/
-        %h2 Heading
-        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-        %p
-          %a.btn.btn-secondary{:href => "#", :role => "button"} View details »
+      .col
+        .welcome.text-center
+          %h1
+            Herzlich Willkommen bei
+            .title CFB&nbsp;PHYSIO &&nbsp;FITNESS
+          %h3 Ihrer Praxis für Physiotherapie, Krankengymnastik, Osteopathie und Fitnesstraining im Münchener Westend
 
-    %hr.featurette-divider/
-    .row.featurette
-      .col-md-7
-        %h2.featurette-heading
-          First featurette heading.
-          %span.text-muted It'll blow your mind.
-        %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-      .col-md-5
-        %img.featurette-image.img-fluid.mx-auto{:alt => "Generic placeholder image", "src" => "https://via.placeholder.com/500x250"}/
-    %hr.featurette-divider/
-    .row.featurette
-      .col-md-7.order-md-2
-        %h2.featurette-heading
-          Oh yeah, it's that good.
-          %span.text-muted See for yourself.
-        %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-      .col-md-5.order-md-1
-        %img.featurette-image.img-fluid.mx-auto{:alt => "Generic placeholder image", "src" => "https://via.placeholder.com/500x250"}/
-    %hr.featurette-divider/
-    .row.featurette
-      .col-md-7
-        %h2.featurette-heading
-          And lastly, this one.
-          %span.text-muted Checkmate.
-        %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-      .col-md-5
-        %img.featurette-image.img-fluid.mx-auto{:alt => "Generic placeholder image", "src" => "https://via.placeholder.com/500x250"}/
+
+    .row
+      .col-lg-2.col-md-4.col-6.grid-image
+        = image_tag "quadrat/kinesio.jpg", class: "d-block w-100"
+      .col-lg-2.col-md-4.col-6.grid-image
+        = image_tag "quadrat/knie.jpg", class: "d-block w-100"
+      .col-lg-2.col-md-4.col-6.grid-image
+        = image_tag "quadrat/massage.jpg", class: "d-block w-100"
+      .col-lg-2.col-md-4.col-6.grid-image
+        = image_tag "quadrat/ruecken.jpg", class: "d-block w-100"
+      .col-lg-2.col-md-4.col-6.grid-image
+        = image_tag "quadrat/schulter.jpg", class: "d-block w-100"
+      .col-lg-2.col-md-4.col-6.grid-image
+        = image_tag "quadrat/schwanger.jpg", class: "d-block w-100"

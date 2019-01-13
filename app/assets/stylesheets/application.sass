@@ -20,25 +20,11 @@ $dark-green: rgb(0, 128, 0)
 $medium-green: rgb(48, 176, 48)
 $light-green: rgb(96, 224, 96)
 
-
+@import "home"
 @import "team"
 @import "therapien"
 @import "kontakt"
 @import "datenschutz"
-
-#top-teaser
-  background-image: url(asset_path("teaser.jpg"))
-  background-position: center center
-  background-size: cover
-  width: 100%
-  height: 240px
-
-h1
-  border-bottom: 1px solid $medium-green
-  font-size: 3rem
-  margin-top: 3rem
-
-
 
 body
   color: #5a5a5a
@@ -48,6 +34,18 @@ body
 .top-bar
   background-color: $medium-green
   height: 50px
+
+#top-teaser
+  background-image: url(asset_path("teaser.jpg"))
+  background-position: center center
+  background-size: cover
+  width: 100%
+  height: 240px
+
+h1.page-title
+  border-bottom: 1px solid $medium-green
+  font-size: 3rem
+  margin-top: 3rem
 
 
 nav
@@ -73,26 +71,9 @@ nav
     margin-top: -63px
 
 
-
 .carousel
   margin-bottom: 4rem
 
-
-
-.marketing
-  .col-lg-4
-    margin-bottom: 1.5rem
-    text-align: center
-  h2
-    font-weight: 400
-  .col-lg-4 p
-    margin-right: .75rem
-    margin-left: .75rem
-
-
-
-.featurette-divider
-  margin: 5rem 0
 
 
 
@@ -102,7 +83,7 @@ footer
   font-weight: 300
   padding-bottom: 1rem
   padding-top: 2rem
-  margin-top: 5rem
+  margin-top: 4rem
 
   a, a:hover, a:active
     color: white
