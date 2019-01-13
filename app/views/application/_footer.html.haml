@@ -1,11 +1,11 @@
 %footer
   .container
     .row
-      .col.address
+      .col-md-4.address
         %address
           %ul.list-unstyled
             %li
-              .main CrossFitBewegt Gmbh
+              .main CrossFitBewegt GmbH
             %li
               = fa_icon "map-marker"
               Westendstraße 185
@@ -18,7 +18,26 @@
             %li
               = fa_icon "envelope"
               = mail_to "info@crossfitbewegt.com"
-      .col.links
+      .col-md-4.hours.center
+        .main.text-md-center Öffnungszeiten
+        .row
+          .col.text-md-right Montag
+          .col.text-md-left  7:00 - 18:00
+          .w-100
+          .col.text-md-right Dienstag
+          .col.text-md-left  7:00 - 18:00
+          .w-100
+          .col.text-md-right Mittwoch
+          .col.text-md-left  7:00 - 18:00
+          .w-100
+          .col.text-md-right Donnerstag
+          .col.text-md-left  7:00 - 18:00
+          .w-100
+          .col.text-md-right Freitag
+          .col.text-md-left  7:00 - 18:00
+
+      .col-md-4.links.pull-right
         %ul.list-unstyled
+          %li= link_to "Kontakt", page_path("kontakt")
           %li= link_to "Impressum", page_path("impressum")
           %li= link_to "Datenschutz", page_path("datenschutz")
