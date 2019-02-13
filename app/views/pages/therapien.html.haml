@@ -3,10 +3,17 @@
 #therapien
 
   .container
-    = image_tag "header_therapien.jpg", class: "img-fluid"
+    //= image_tag "header_therapien.jpg", class: "img-fluid"
+
+    %picture
+      %source{media: "(min-width: 1200px)", srcset: "#{image_path("header_therapien.jpg?width=2280")} 2x, #{image_path("header_therapien.jpg?width=1110")} 1x"}
+      %source{media: "(min-width:  992px)", srcset: "#{image_path("header_therapien.jpg?width=1920")} 2x, #{image_path("header_therapien.jpg?width=930")} 1x"}
+      %source{media: "(min-width:  768px)", srcset: "#{image_path("header_therapien.jpg?width=1440")} 2x, #{image_path("header_therapien.jpg?width=690")} 1x"}
+      %source{media: "(min-width:  576px)", srcset: "#{image_path("header_therapien.jpg?width=1080")} 2x, #{image_path("header_therapien.jpg?width=510")} 1x"}
+      %img.img-fluid{src: image_path("header_therapien.jpg?width=1110")}
+
 
     %h1.page-title.mb-10 Therapien
-
 
     .card-columns
 
