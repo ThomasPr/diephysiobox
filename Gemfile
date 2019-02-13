@@ -64,3 +64,4 @@ gem 'high_voltage', '~> 3.1'
 gem "font-awesome-rails"
 gem "bootstrap_form", ">= 4.0.0.alpha1"
 gem 'rails-i18n'
+gem "actionpack-page_caching"
