@@ -23,7 +23,7 @@ $light-green: rgb(96, 224, 96)
 @import "home"
 @import "team"
 @import "therapien"
-@import "fitness"
+@import "sport-reha"
 @import "kontakt"
 @import "datenschutz"
 
@@ -51,11 +51,15 @@ h1.page-title
 
 nav
   .nav-link
-    padding: 15px !important
-    font-weight: 500
-    font-size: 1.3rem
     color: $dark-green
     text-align: right
+    font-weight: 500
+
+    @media(min-width: 991px)
+      padding: 15px !important
+      font-size: 1.3rem
+
+
 
   .active .nav-link, a.nav-link:hover, a.nav-link:active
       color: $light-green
