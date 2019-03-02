@@ -3,7 +3,8 @@
 #fitness
 
   .container
-    = image_tag "header_fitness.jpg", class: "img-fluid"
+
+    = render "picture", image: "header_fitness.jpg", sizes: [1110, 930, 690, 510]
 
     %h1.page-title Fitness
 
@@ -21,7 +22,7 @@
         %h2.featurette-heading Kinesiotaping
         %p.lead in Kinesio-Tape ist ein elastisches, selbstklebendes und atmungsaktives Tape aus reiner Baumwolle, das direkt auf die Haut geklebt wird. Es ist angenehm zu tragen und schränkt die Bewegungsfähigkeit nicht ein. Das Tape erzielt seine Wirkung durch spezielle Anlagetechniken, die die Physiotherapeutin individuell auswählt. Kinesio-Taping ist schmerzlos, medikamentenfrei und ohne Nebenwirkungen. Kinesio-Taping kann eine physiotherapeutische Behandlung positiv unterstützen. Das Anwendungsspektrum ist breit gefächert. Es reicht von chronischen oder akuten Rückenschmerzen, Spannungskopfschmerzen und Muskelverspannungen bis zum Tennisellenbogen. Ziel dieser Therapie ist die Verbesserung von Muskelfunktion und Lymphzirkulation sowie die Unterstützung der Gelenkfunktion und die Schmerzreduktion.
       .col-md-3.order-md-1
-        = image_tag "quadrat/kinesio.jpg", class: "featurette-image img-fluid mx-auto"
+        = render "picture", image: "quadrat/kinesio.jpg", sizes: [255, 210, 150, 350], class: "featurette-image"
 
     %hr.featurette-divider/
 
@@ -34,4 +35,4 @@
           = succeed "." do
             - link_to "https://crossfitbewegt.com"
       .col-md-3
-        = image_tag "quadrat/crossfit.jpg", class: "featurette-image img-fluid mx-auto"
+        = render "picture", image: "quadrat/crossfit.jpg", sizes: [255, 210, 150, 350], class: "featurette-image"

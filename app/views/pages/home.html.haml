@@ -13,15 +13,15 @@
         %li{"data-slide-to" => "4", "data-target" => "#carouselExampleIndicators"}
       .carousel-inner
         .carousel-item.active
-          = image_tag "slider/slider1.jpg", class: "d-block w-100"
+          = render "picture", image: "slider/slider1.jpg", sizes: [1110, 930, 690, 510]
         .carousel-item
-          = image_tag "slider/slider2.jpg", class: "d-block w-100"
+          = render "picture", image: "slider/slider2.jpg", sizes: [1110, 930, 690, 510]
         .carousel-item
-          = image_tag "slider/slider3.jpg", class: "d-block w-100"
+          = render "picture", image: "slider/slider3.jpg", sizes: [1110, 930, 690, 510]
         .carousel-item
-          = image_tag "slider/slider4.jpg", class: "d-block w-100"
+          = render "picture", image: "slider/slider4.jpg", sizes: [1110, 930, 690, 510]
         .carousel-item
-          = image_tag "slider/slider5.jpg", class: "d-block w-100"
+          = render "picture", image: "slider/slider5.jpg", sizes: [1110, 930, 690, 510]
       %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleIndicators", :role => "button"}
         %span.carousel-control-prev-icon{"aria-hidden" => "true"}
         %span.sr-only Previous
@@ -41,17 +41,17 @@
 
     .row
       .col-lg-3.col-md-4.col-6.grid-image
-        = image_tag "quadrat/kinesio.jpg", class: "img-fluid"
+        = render "picture", image: "quadrat/kinesio.jpg", sizes: [255, 210, 210, 240]
       .col-lg-3.col-md-4.col-6.grid-image
-        = image_tag "quadrat/knie.jpg", class: "img-fluid"
+        = render "picture", image: "quadrat/knie.jpg", sizes: [255, 210, 210, 240]
       .col-lg-3.col-md-4.col-6.grid-image
-        = image_tag "quadrat/massage.jpg", class: "img-fluid"
+        = render "picture", image: "quadrat/massage.jpg", sizes: [255, 210, 210, 240]
       .col-lg-3.col-md-4.col-6.grid-image
-        = image_tag "quadrat/ruecken.jpg", class: "img-fluid"
+        = render "picture", image: "quadrat/ruecken.jpg", sizes: [255, 210, 210, 240]
       .col-lg-3.col-md-4.col-6.grid-image
-        = image_tag "quadrat/schulter.jpg", class: "img-fluid"
+        = render "picture", image: "quadrat/schulter.jpg", sizes: [255, 210, 210, 240]
       .col-lg-3.col-md-4.col-6.grid-image
-        = image_tag "quadrat/schwanger.jpg", class: "img-fluid"
+        = render "picture", image: "quadrat/schwanger.jpg", sizes: [255, 210, 210, 240]
       .col-lg-3.col-md-4.col-6.grid-image
         = image_tag "https://via.placeholder.com/255x255", class: "img-fluid"
       .col-lg-3.col-md-4.col-6.grid-image

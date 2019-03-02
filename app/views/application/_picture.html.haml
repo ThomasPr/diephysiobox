@@ -1,0 +1,10 @@
+
+- grid = [1200, 992, 768, 576]
+- densities = [3, 2, 1]
+- image_options = local_assigns.except(:image, :sizes)
+
+%picture
+  - sizes.each_with_index do |size, i|
+    - srcset = densities.map{ |d| "#{image_path(image)}?width=#{size * d} #{d}x"}.join(", ")
+    %source{media: "(min-width: #{grid[i]}px)", srcset: srcset}
+  %img.img-fluid.d-block.mx-auto{image_options, src: image_path("#{image}?width=#{sizes.last}")}
