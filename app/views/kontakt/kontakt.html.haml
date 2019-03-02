@@ -8,11 +8,12 @@
     .row
       .col-md-7.mb-5
         %picture
-          %source{media: "(min-width: 1200px)", srcset: "https://maps.googleapis.com/maps/api/staticmap?center=48.134,11.523592&zoom=13&size=1905x1650&markers=color:0x30b030%7C48.134,11.523592&key=AIzaSyBC7IgkmHJLl7C42c1_KWBHBYouPXLNBxs 3x, https://maps.googleapis.com/maps/api/staticmap?center=48.134,11.523592&zoom=13&size=1270x1110&markers=color:0x30b030%7C48.134,11.523592&key=AIzaSyBC7IgkmHJLl7C42c1_KWBHBYouPXLNBxs 2x, https://maps.googleapis.com/maps/api/staticmap?center=48.134,11.523592&zoom=13&size=635x550&markers=color:0x30b030%7C48.134,11.523592&key=AIzaSyBC7IgkmHJLl7C42c1_KWBHBYouPXLNBxs 1x"}
-          %source{media: "(min-width:  992px)", srcset: "https://maps.googleapis.com/maps/api/staticmap?center=48.134,11.523592&zoom=13&size=1590x1650&markers=color:0x30b030%7C48.134,11.523592&key=AIzaSyBC7IgkmHJLl7C42c1_KWBHBYouPXLNBxs 3x, https://maps.googleapis.com/maps/api/staticmap?center=48.134,11.523592&zoom=13&size=1060x1110&markers=color:0x30b030%7C48.134,11.523592&key=AIzaSyBC7IgkmHJLl7C42c1_KWBHBYouPXLNBxs 2x, https://maps.googleapis.com/maps/api/staticmap?center=48.134,11.523592&zoom=13&size=530x550&markers=color:0x30b030%7C48.134,11.523592&key=AIzaSyBC7IgkmHJLl7C42c1_KWBHBYouPXLNBxs 1x"}
-          %source{media: "(min-width:  768px)", srcset: "https://maps.googleapis.com/maps/api/staticmap?center=48.134,11.523592&zoom=13&size=1170x1650&markers=color:0x30b030%7C48.134,11.523592&key=AIzaSyBC7IgkmHJLl7C42c1_KWBHBYouPXLNBxs 3x, https://maps.googleapis.com/maps/api/staticmap?center=48.134,11.523592&zoom=13&size=780x550&markers=color:0x30b030%7C48.134,11.523592&key=AIzaSyBC7IgkmHJLl7C42c1_KWBHBYouPXLNBxs 2x, https://maps.googleapis.com/maps/api/staticmap?center=48.134,11.523592&zoom=13&size=390x550&markers=color:0x30b030%7C48.134,11.523592&key=AIzaSyBC7IgkmHJLl7C42c1_KWBHBYouPXLNBxs 1x"}
-          %source{media: "(min-width:  576px)", srcset: "https://maps.googleapis.com/maps/api/staticmap?center=48.134,11.523592&zoom=13&size=1530x924&markers=color:0x30b030%7C48.134,11.523592&key=AIzaSyBC7IgkmHJLl7C42c1_KWBHBYouPXLNBxs 3x, https://maps.googleapis.com/maps/api/staticmap?center=48.134,11.523592&zoom=13&size=1020x612&markers=color:0x30b030%7C48.134,11.523592&key=AIzaSyBC7IgkmHJLl7C42c1_KWBHBYouPXLNBxs 2x, https://maps.googleapis.com/maps/api/staticmap?center=48.134,11.523592&zoom=13&size=510x306&markers=color:0x30b030%7C48.134,11.523592&key=AIzaSyBC7IgkmHJLl7C42c1_KWBHBYouPXLNBxs 1x"}
-          %img{class: "img-fluid", src: "https://maps.googleapis.com/maps/api/staticmap?center=48.134,11.523592&zoom=13&size=545x327&markers=color:0x30b030%7C48.134,11.523592&key=AIzaSyBC7IgkmHJLl7C42c1_KWBHBYouPXLNBxs"}
+          - map = "https://maps.googleapis.com/maps/api/staticmap?center=48.134,11.523592&zoom=13&markers=color:0x30b030%7C48.134,11.523592&key=AIzaSyBC7IgkmHJLl7C42c1_KWBHBYouPXLNBxs"
+          %source{media: "(min-width: 1200px)", srcset: "#{map}&size=635x550&scale=2 2x, #{map}&size=635x550&scale=1 1x"}
+          %source{media: "(min-width:  992px)", srcset: "#{map}&size=530x550&scale=2 2x, #{map}&size=530x550&scale=1 1x"}
+          %source{media: "(min-width:  768px)", srcset: "#{map}&size=390x550&scale=2 2x, #{map}&size=390x550&scale=1 1x"}
+          %source{media: "(min-width:  576px)", srcset: "#{map}&size=510x306&scale=2 2x, #{map}&size=510x306&scale=1 1x"}
+          %img{class: "img-fluid", alt: "Umgebungskarte", src: "#{map}&size=545x327"}
 
       .col-md-5.mb-5
         #kontakt-form
