@@ -13,15 +13,15 @@
         %li{"data-slide-to" => "4", "data-target" => "#carouselExampleIndicators"}
       .carousel-inner
         .carousel-item.active
-          = render "picture", image: "slider/slider1.jpg", sizes: [1110, 930, 690, 510]
+          = render "picture", image: "slider/ruecken.jpg", sizes: [1110, 930, 690, 510], alt: "Behandlung Rücken"
         .carousel-item
-          = render "picture", image: "slider/slider2.jpg", sizes: [1110, 930, 690, 510]
+          = render "picture", image: "slider/behandlungsraum.jpg", sizes: [1110, 930, 690, 510], alt: "Behandlungsraum"
         .carousel-item
-          = render "picture", image: "slider/slider3.jpg", sizes: [1110, 930, 690, 510]
+          = render "picture", image: "slider/hand.jpg", sizes: [1110, 930, 690, 510], alt: "Erklärung an einem Handmodell"
         .carousel-item
-          = render "picture", image: "slider/slider4.jpg", sizes: [1110, 930, 690, 510]
+          = render "picture", image: "slider/schwanger.jpg", sizes: [1110, 930, 690, 510], alt: "Behandlung Schwanger"
         .carousel-item
-          = render "picture", image: "slider/slider5.jpg", sizes: [1110, 930, 690, 510]
+          = render "picture", image: "slider/theraband.jpg", sizes: [1110, 930, 690, 510], alt: "Behandlung mit TheraBand"
       %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleIndicators", :role => "button"}
         %span.carousel-control-prev-icon{"aria-hidden" => "true"}
         %span.sr-only Previous
@@ -41,17 +41,17 @@
 
     .row
       .col-lg-3.col-md-4.col-6.grid-image
-        = render "picture", image: "quadrat/kinesio.jpg", sizes: [255, 210, 210, 240]
+        = render "picture", image: "quadrat/kinesio.jpg", sizes: [255, 210, 210, 240], alt: "Kinesiotaping"
       .col-lg-3.col-md-4.col-6.grid-image
-        = render "picture", image: "quadrat/knie.jpg", sizes: [255, 210, 210, 240]
+        = render "picture", image: "quadrat/knie.jpg", sizes: [255, 210, 210, 240], alt: "Behandlung Knie"
       .col-lg-3.col-md-4.col-6.grid-image
-        = render "picture", image: "quadrat/massage.jpg", sizes: [255, 210, 210, 240]
+        = render "picture", image: "quadrat/massage.jpg", sizes: [255, 210, 210, 240], alt: "Massage"
       .col-lg-3.col-md-4.col-6.grid-image
-        = render "picture", image: "quadrat/ruecken.jpg", sizes: [255, 210, 210, 240]
+        = render "picture", image: "quadrat/ruecken.jpg", sizes: [255, 210, 210, 240], alt: "Behandlung Rücken"
       .col-lg-3.col-md-4.col-6.grid-image
-        = render "picture", image: "quadrat/schulter.jpg", sizes: [255, 210, 210, 240]
+        = render "picture", image: "quadrat/schulter.jpg", sizes: [255, 210, 210, 240], alt: "Behandlung Schulter"
       .col-lg-3.col-md-4.col-6.grid-image
-        = render "picture", image: "quadrat/schwanger.jpg", sizes: [255, 210, 210, 240]
+        = render "picture", image: "quadrat/schwanger.jpg", sizes: [255, 210, 210, 240], alt: "Behandlung Schwanger"
       .col-lg-3.col-md-4.col-6.grid-image
         = image_tag "https://via.placeholder.com/255x255", class: "img-fluid"
       .col-lg-3.col-md-4.col-6.grid-image
