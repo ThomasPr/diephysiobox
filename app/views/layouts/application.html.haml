@@ -9,7 +9,7 @@
     %meta{property: "og:title", content: content_for?(:title) ? "#{content_for(:title)} • CFB Physio" : "CFB Physio"}
     %meta{property: "og:image", content: image_url("og_image.jpg")}
     = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application'
+    = javascript_include_tag 'application', async: Rails.env.production?
     = favicon_link_tag "favicon.png", type: "image/png"
 
   %body
