@@ -46,13 +46,13 @@
         .lead
           Sie möchten
           %ul
-            %li Abnehmen
-            %li Einen gesunden Rücken
+            %li Abnehmen?
+            %li Einen gesunden Rücken?
             %li Fit werden und bleiben?
             %li Medizinisch ausgebildete Trainer?
             %li Hilfe beim Sixpack?
         %p.lead Sprechen Sie uns persönlich an und wir erstellen mit Ihnen einen gemeinsamen Plan!
 
-      .col-md-3
+      .col-md-3.order-md-1
         = link_to asset_path("personal-training.pdf"), target: "_blank", alt: "Personal Training" do
           = render "picture", image: "personal-training.png", sizes: [255, 210, 150, 350], class: "featurette-image"
