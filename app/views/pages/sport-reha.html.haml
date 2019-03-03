@@ -36,3 +36,23 @@
             = link_to "https://crossfitbewegt.com", "https://crossfitbewegt.com"
       .col-md-3
         = render "picture", image: "quadrat/crossfit.jpg", sizes: [255, 210, 150, 350], class: "featurette-image"
+
+    %hr.featurette-divider/
+
+    .row.featurette#personal-training
+      .col-md-9.order-md-2
+        %h2.featurette-heading Personal Training
+        %p.lead Nutzen Sie das Wissen der modernen der modernen Sportmedizin und lassen Sie sich von erfahrenen Trainern persönlich beraten und motivieren.
+        .lead
+          Sie möchten
+          %ul
+            %li Abnehmen
+            %li Einen gesunden Rücken
+            %li Fit werden und bleiben?
+            %li Medizinisch ausgebildete Trainer?
+            %li Hilfe beim Sixpack?
+        %p.lead Sprechen Sie uns persönlich an und wir erstellen mit Ihnen einen gemeinsamen Plan!
+
+      .col-md-3
+        = link_to asset_path("personal-training.pdf"), target: "_blank", alt: "Personal Training" do
+          = render "picture", image: "personal-training.png", sizes: [255, 210, 150, 350], class: "featurette-image"
