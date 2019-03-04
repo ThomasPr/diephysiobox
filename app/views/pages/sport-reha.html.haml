@@ -8,34 +8,12 @@
 
     %h1.page-title Sport & Reha
 
-    .row.featurette#sportphysiotherapie
+    .row.featurette#rehabilitation-und-sporttherapie
       .col-md-9
-        %h2.featurette-heading Sportphysiotherapie
+        %h2.featurette-heading Rehabilitation und Sporttherapie
         %p.lead Diese Therapie befasst sich mit dem Erstellen von differenzierten Therapie- und Trainingsplänen nach einer Verletzung bzw. einem Trauma unter Beachtung der verletzten Strukturen und ihrer Heilungsverläufe. Somit ist sie Bestandteil der funktionellen Trainingstherapie.
       .col-md-3
         = render "picture", image: "quadrat/sportphysio.jpg", sizes: [255, 210, 150, 350], class: "featurette-image", alt: "Sportphysiotherapie"
-
-    %hr.featurette-divider/
-
-    .row.featurette#kinesiotaping
-      .col-md-9.order-md-2
-        %h2.featurette-heading Kinesiotaping
-        %p.lead in Kinesio-Tape ist ein elastisches, selbstklebendes und atmungsaktives Tape aus reiner Baumwolle, das direkt auf die Haut geklebt wird. Es ist angenehm zu tragen und schränkt die Bewegungsfähigkeit nicht ein. Das Tape erzielt seine Wirkung durch spezielle Anlagetechniken, die die Physiotherapeutin individuell auswählt. Kinesio-Taping ist schmerzlos, medikamentenfrei und ohne Nebenwirkungen. Kinesio-Taping kann eine physiotherapeutische Behandlung positiv unterstützen. Das Anwendungsspektrum ist breit gefächert. Es reicht von chronischen oder akuten Rückenschmerzen, Spannungskopfschmerzen und Muskelverspannungen bis zum Tennisellenbogen. Ziel dieser Therapie ist die Verbesserung von Muskelfunktion und Lymphzirkulation sowie die Unterstützung der Gelenkfunktion und die Schmerzreduktion.
-      .col-md-3.order-md-1
-        = render "picture", image: "quadrat/kinesio.jpg", sizes: [255, 210, 150, 350], class: "featurette-image", alt: "Kinesiotaping"
-
-    %hr.featurette-divider/
-
-    .row.featurette#crossfit
-      .col-md-9
-        %h2.featurette-heading CrossFit
-        %p.lead
-          „CrossFit“ zu sein bedeutet, eine allgemeine physische Kapazität zu besitzen, die sich im Allgemeinen gut für alle Eventualitäten eignet: das Wahrscheinliche, das Unwahrscheinliche, das Bekannte, das Unbekannte. Die Fitness des CrossFit-Athleten bietet eine solide Grundlage für jede Sportart oder Aufgabe.
-          Mehr Informationen zu unseren CrossFit-Angeboten erhalten Sie auf
-          = succeed "." do
-            = link_to "https://crossfitbewegt.com", "https://crossfitbewegt.com"
-      .col-md-3
-        = render "picture", image: "quadrat/crossfit.jpg", sizes: [255, 210, 150, 350], class: "featurette-image", alt: "Kettlebells"
 
     %hr.featurette-divider/
 
@@ -52,7 +30,29 @@
             %li Medizinisch ausgebildete Trainer?
             %li Hilfe beim Sixpack?
         %p.lead Sprechen Sie uns persönlich an und wir erstellen mit Ihnen einen gemeinsamen Plan!
-
       .col-md-3.order-md-1
         = link_to asset_path("personal-training.pdf"), target: "_blank" do
           = render "picture", image: "personal-training.png", sizes: [255, 210, 150, 350], class: "featurette-image", alt: "Personal Training"
+
+    %hr.featurette-divider/
+
+    .row.featurette#kinesiotaping
+      .col-md-9
+        %h2.featurette-heading Kinesiotaping
+        %p.lead in Kinesio-Tape ist ein elastisches, selbstklebendes und atmungsaktives Tape aus reiner Baumwolle, das direkt auf die Haut geklebt wird. Es ist angenehm zu tragen und schränkt die Bewegungsfähigkeit nicht ein. Das Tape erzielt seine Wirkung durch spezielle Anlagetechniken, die die Physiotherapeutin individuell auswählt. Kinesio-Taping ist schmerzlos, medikamentenfrei und ohne Nebenwirkungen. Kinesio-Taping kann eine physiotherapeutische Behandlung positiv unterstützen. Das Anwendungsspektrum ist breit gefächert. Es reicht von chronischen oder akuten Rückenschmerzen, Spannungskopfschmerzen und Muskelverspannungen bis zum Tennisellenbogen. Ziel dieser Therapie ist die Verbesserung von Muskelfunktion und Lymphzirkulation sowie die Unterstützung der Gelenkfunktion und die Schmerzreduktion.
+      .col-md-3
+        = render "picture", image: "quadrat/kinesio.jpg", sizes: [255, 210, 150, 350], class: "featurette-image", alt: "Kinesiotaping"
+
+    %hr.featurette-divider/
+
+    .row.featurette#crossfit
+      .col-md-9.order-md-2
+        %h2.featurette-heading CrossFit
+        %p.lead
+          „CrossFit“ zu sein bedeutet, eine allgemeine physische Kapazität zu besitzen, die sich im Allgemeinen gut für alle Eventualitäten eignet: das Wahrscheinliche, das Unwahrscheinliche, das Bekannte, das Unbekannte. Die Fitness des CrossFit-Athleten bietet eine solide Grundlage für jede Sportart oder Aufgabe.
+          Mehr Informationen zu unseren CrossFit-Angeboten erhalten Sie auf
+          = succeed "." do
+            = link_to "https://crossfitbewegt.com", "https://crossfitbewegt.com"
+      .col-md-3.order-md-1
+        = render "picture", image: "quadrat/crossfit.jpg", sizes: [255, 210, 150, 350], class: "featurette-image", alt: "Kettlebells"
+
