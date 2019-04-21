@@ -40,19 +40,26 @@
 
 
     .row
-      .col-lg-3.col-md-4.col-6.grid-image
-        = render "picture", image: "quadrat/kinesio.jpg", sizes: [255, 210, 210, 240], alt: "Kinesiotaping"
-      .col-lg-3.col-md-4.col-6.grid-image
-        = render "picture", image: "quadrat/knie.jpg", sizes: [255, 210, 210, 240], alt: "Behandlung Knie"
-      .col-lg-3.col-md-4.col-6.grid-image
-        = render "picture", image: "quadrat/massage.jpg", sizes: [255, 210, 210, 240], alt: "Massage"
-      .col-lg-3.col-md-4.col-6.grid-image
-        = render "picture", image: "quadrat/ruecken.jpg", sizes: [255, 210, 210, 240], alt: "Behandlung Rücken"
-      .col-lg-3.col-md-4.col-6.grid-image
-        = render "picture", image: "quadrat/schulter.jpg", sizes: [255, 210, 210, 240], alt: "Behandlung Schulter"
-      .col-lg-3.col-md-4.col-6.grid-image
-        = render "picture", image: "quadrat/schwanger.jpg", sizes: [255, 210, 210, 240], alt: "Behandlung Schwanger"
-      .col-lg-3.col-md-4.col-6.grid-image
-        = image_tag "https://via.placeholder.com/255x255", class: "img-fluid"
-      .col-lg-3.col-md-4.col-6.grid-image
-        = image_tag "https://via.placeholder.com/255x255", class: "img-fluid"
+      .col-md-4.col-6.grid-image
+        =link_to page_path("sport-reha", anchor: "personal-training") do
+          = render "picture", image: "quadrat/kinesio.jpg", sizes: [350, 290, 210, 240], alt: "Personal Training"
+          .carousel-caption.text-right Personal Training
+      .col-md-4.col-6.grid-image
+        = link_to page_path("therapien", anchor: "krankengymnastik") do
+          = render "picture", image: "quadrat/knie.jpg", sizes: [350, 290, 210, 240], alt: "Krankengymnastik"
+          .carousel-caption.text-right Krankengymnastik
+      .col-md-4.col-6.grid-image
+        = link_to page_path("therapien", anchor: "klassische-massage") do
+          = render "picture", image: "quadrat/massage.jpg", sizes: [350, 290, 210, 240], alt: "Massage"
+          .carousel-caption.text-right Massage
+      .col-md-4.col-6.grid-image
+        = render "picture", image: "quadrat/ruecken.jpg", sizes: [350, 290, 210, 240], alt: "Osteopathische Behandlung"
+        .carousel-caption.text-right Osteopathische Behandlung
+      .col-md-4.col-6.grid-image
+        = link_to page_path("therapien", anchor: "manuelle-therapie") do
+          = render "picture", image: "quadrat/schulter.jpg", sizes: [350, 290, 210, 240], alt: "Manuelle Therapie"
+          .carousel-caption.text-right Manuelle Therapie
+      .col-md-4.col-6.grid-image
+        = link_to page_path("therapien", anchor: "behandlung-von-schwangeren") do
+          = render "picture", image: "quadrat/schwanger.jpg", sizes: [350, 290, 210, 240], alt: "Behandlung von Schwangeren"
+          .carousel-caption.text-right Behandlung von Schwangeren
