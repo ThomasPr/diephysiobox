@@ -1,5 +1,5 @@
 class KontaktController < ApplicationController
-  #caches_page :new, gzip: 9
+  caches_page :new, gzip: 9
 
   def new
     @kontakt = Kontakt.new
