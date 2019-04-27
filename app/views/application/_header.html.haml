@@ -1,10 +1,46 @@
 %header
   .top-bar
+    .container
+      .text-right
+        %ul.list-inline
+          %li.list-inline-item
+            .dropdown
+              %a.btn{role: "button", "data-toggle" => "dropdown", "aria-haspopup" => "true", "aria-expanded" => "false"}
+
+                = fa_icon "clock-o"
+                Öffnungszeiten
+              .dropdown-menu.p-4
+                %table
+                  %tbody
+                    %tr
+                      %td Montag
+                      %td.text-right 07:00 - 18:00
+                    %tr
+                      %td Dienstag
+                      %td.text-right 07:00 - 18:00
+                    %tr
+                      %td Mittwoch
+                      %td.text-right 07:00 - 18:00
+                    %tr
+                      %td Donnerstag
+                      %td.text-right 07:00 - 18:00
+                    %tr
+                      %td Freitag
+                      %td.text-right 07:00 - 18:00
+
+          %li.list-inline-item
+            = fa_icon "phone"
+            (089) 95 49 37 10
+          %li.list-inline-item
+            = link_to "https://www.facebook.com/crossfitbewegt" do
+              = fa_icon "facebook"
+
+
   .container
-    %nav.navbar.navbar-expand-md
+    %nav.navbar.navbar-expand-md.main-nav
       %span.navbar-brand
         = link_to root_path do
-          = render "picture", image: "crossfitbewegt.png", sizes: [210, 210, 210, 210], alt: "Logo"
+          = render "picture", image: "crossfitbewegt.png", sizes: [210, 210, 210, 158], alt: "Logo"
       %button.navbar-toggler.ml-auto{"aria-controls" => "navbarCollapse", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarCollapse", "data-toggle" => "collapse", :type => "button"}
         %span.navbar-toggler-icon
 

@@ -42,6 +42,34 @@ a, a:hover, a:active
 .top-bar
   background-color: $medium-green
   height: 50px
+  color: white
+
+  .btn
+    display: inline
+    padding: 0
+    font-size: inherit
+    border: 0
+    vertical-align: top
+
+  .list-inline-item
+    padding: 13px
+    font-size: 16px
+
+    @media(max-width: 990px)
+      padding: 15px 5px
+      font-size: 14px
+
+
+  .fa
+    margin-right: 0.3em
+
+  .dropdown-menu
+    table
+      min-width: 200px
+
+  .dropdown:hover > .dropdown-menu, .dropdown:active > .dropdown-menu
+    display: block
+
 
 h1.page-title
   border-bottom: 1px solid $medium-green
@@ -49,7 +77,12 @@ h1.page-title
   margin-top: 3rem
 
 
-nav
+.main-nav
+  padding-right: 0
+
+  @media(max-width: 990px)
+    padding-left: 0
+
   .nav-link
     color: $dark-green
     text-align: right
