@@ -53,8 +53,9 @@
           = render "picture", image: "quadrat/massage.jpg", sizes: [350, 290, 210, 240], alt: "Massage"
           .grid-caption Massage
       .col-md-4.col-6.grid-image
-        = render "picture", image: "quadrat/ruecken.jpg", sizes: [350, 290, 210, 240], alt: "Osteopathische Behandlung"
-        .grid-caption Osteopathische Behandlung
+        = link_to page_path("therapien", anchor: "osteopathisches-behandlungskonzept") do
+          = render "picture", image: "quadrat/ruecken.jpg", sizes: [350, 290, 210, 240], alt: "Osteopathische Behandlung"
+          .grid-caption Osteopathische Behandlung
       .col-md-4.col-6.grid-image
         = link_to page_path("therapien", anchor: "manuelle-therapie") do
           = render "picture", image: "quadrat/schulter.jpg", sizes: [350, 290, 210, 240], alt: "Manuelle Therapie"
