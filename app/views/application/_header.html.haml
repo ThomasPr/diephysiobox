@@ -1,64 +1,73 @@
-%header
-  .top-bar
-    .container
-      .text-right
-        %ul.list-inline
-          %li.list-inline-item
-            .dropdown
-              %a.btn{role: "button", "data-toggle" => "dropdown", "aria-haspopup" => "true", "aria-expanded" => "false"}
-
-                = fa_icon "clock-o"
-                Öffnungszeiten
-              .dropdown-menu.p-4
-                %table
-                  %tbody
-                    %tr
-                      %td Montag
-                      %td.text-right 07:00 - 18:00
-                    %tr
-                      %td Dienstag
-                      %td.text-right 07:00 - 18:00
-                    %tr
-                      %td Mittwoch
-                      %td.text-right 07:00 - 18:00
-                    %tr
-                      %td Donnerstag
-                      %td.text-right 07:00 - 18:00
-                    %tr
-                      %td Freitag
-                      %td.text-right 07:00 - 18:00
-
-          %li.list-inline-item
-            = fa_icon "phone"
-            (089) 95 49 37 10
-          %li.list-inline-item
-            = link_to "https://www.facebook.com/crossfitbewegt" do
-              = fa_icon "facebook"
-
-
+.top-bar
   .container
-    %nav.navbar.navbar-expand-md.main-nav
-      %span.navbar-brand
-        = link_to root_path do
-          = render "picture", image: "crossfitbewegt.png", sizes: [210, 210, 210, 158], alt: "Logo"
-      %button.navbar-toggler.ml-auto{"aria-controls" => "navbarCollapse", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarCollapse", "data-toggle" => "collapse", :type => "button"}
-        %span.navbar-toggler-icon
+    .text-right
+      %ul.list-inline
+        %li.list-inline-item
+          .dropdown
+            %a.btn{role: "button", "data-toggle" => "dropdown", "aria-haspopup" => "true", "aria-expanded" => "false"}
+
+              = fa_icon "clock-o"
+              Öffnungszeiten
+            .dropdown-menu.p-4
+              %table
+                %tbody
+                  %tr
+                    %td Montag
+                    %td.text-center 7:00 - 21:00
+                  %tr
+                    %td Dienstag
+                    %td.text-center 8:00 - 21:00
+                  %tr
+                    %td Mittwoch
+                    %td.text-center 6:30 - 20:00
+                  %tr
+                    %td Donnerstag
+                    %td.text-center 8:00 - 21:00
+                  %tr
+                    %td Freitag
+                    %td.text-center 8:00 - 20:00
+                  %tr
+                    %td Samstag
+                    %td.text-center 10:00 - 12:00
+                  %tr
+                    %td Sonntag
+                    %td.text-center 17:00 - 19:00
+
+        %li.list-inline-item
+          = fa_icon "phone"
+          (089) 95 49 37 10
+        %li.list-inline-item
+          = link_to kontakt_path do
+            = fa_icon "envelope"
+            Kontakt
+        %li.list-inline-item
+          = link_to "https://www.facebook.com/crossfitbewegt" do
+            = fa_icon "facebook"
 
 
-      #navbarCollapse.collapse.navbar-collapse
-        %ul.navbar-nav.ml-auto
+.container
+  %nav.navbar.navbar-expand-md.main-nav
+    %span.navbar-brand
+      = link_to root_path do
+        = render "picture", image: "crossfitbewegt.png", sizes: [210, 210, 210, 158], alt: "Logo"
+    %button.navbar-toggler.ml-auto{"aria-controls" => "navbarCollapse", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarCollapse", "data-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
 
-          %li.nav-item{class: ('active' if current_page?(root_path))}
-            = link_to "Home", root_path, class: "nav-link"
 
-          %li.nav-item{class: ('active' if current_page?(page_path("therapien")))}
-            = link_to "Therapien", page_path("therapien"), class: "nav-link"
+    #navbarCollapse.collapse.navbar-collapse
+      %ul.navbar-nav.ml-auto
 
-          %li.nav-item{class: ('active' if current_page?(page_path("sport-reha")))}
-            = link_to "Sport & Reha", page_path("sport-reha"), class: "nav-link"
+        %li.nav-item{class: ('active' if current_page?(root_path))}
+          = link_to "Home", root_path, class: "nav-link"
 
-          %li.nav-item{class: ('active' if current_page?(page_path("ueber-uns")))}
-            = link_to "Über uns", page_path("ueber-uns"), class: "nav-link"
+        %li.nav-item{class: ('active' if current_page?(page_path("therapien")))}
+          = link_to "Therapien", page_path("therapien"), class: "nav-link"
 
-          %li.nav-item{class: ('active' if current_page?(kontakt_path))}
-            = link_to "Kontakt", kontakt_path, class: "nav-link"
+        %li.nav-item{class: ('active' if current_page?(page_path("sport-reha")))}
+          = link_to "Sport & Reha", page_path("sport-reha"), class: "nav-link"
+
+        %li.nav-item{class: ('active' if current_page?(page_path("ueber-uns")))}
+          = link_to "Über uns", page_path("ueber-uns"), class: "nav-link"
+
+        %li.nav-item{class: ('active' if current_page?(kontakt_path))}
+          = link_to "Kontakt", kontakt_path, class: "nav-link"

@@ -1,43 +1,49 @@
-%footer
-  .container
-    .row
-      .col-md-4.address
-        %address
-          %ul.list-unstyled
-            %li
-              .main CrossFitBewegt GmbH
-            %li
-              = fa_icon "map-marker"
-              Westendstraße 185
-            %li
-              = fa_icon "invalid"
-              80686 München
-            %li
-              = fa_icon "phone"
-              (089) 95 49 37 10
-            %li
-              = fa_icon "envelope"
-              = mail_to "info@crossfitbewegt.com"
-      .col-md-4.hours.center
-        .main.text-md-center Öffnungszeiten
-        .row
-          .col.text-md-right Montag
-          .col.text-md-left  7:00 - 18:00
-          .w-100
-          .col.text-md-right Dienstag
-          .col.text-md-left  7:00 - 18:00
-          .w-100
-          .col.text-md-right Mittwoch
-          .col.text-md-left  7:00 - 18:00
-          .w-100
-          .col.text-md-right Donnerstag
-          .col.text-md-left  7:00 - 18:00
-          .w-100
-          .col.text-md-right Freitag
-          .col.text-md-left  7:00 - 18:00
-
-      .col-md-4.links.pull-right
+.container
+  .row
+    .col-md-4.address
+      %address
         %ul.list-unstyled
-          %li= link_to "Kontakt", page_path("kontakt")
-          %li= link_to "Impressum", page_path("impressum")
-          %li= link_to "Datenschutz", page_path("datenschutz")
+          %li
+            .main CrossFitBewegt GmbH
+          %li
+            = fa_icon "map-marker"
+            Westendstraße 185
+          %li
+            = fa_icon "invalid"
+            80686 München
+          %li
+            = fa_icon "phone"
+            (089) 95 49 37 10
+          %li
+            = fa_icon "envelope"
+            = mail_to "info@crossfitbewegt.com"
+    .col-md-4.hours.center
+      .main.text-md-center Öffnungszeiten
+      .row
+        .col.text-md-right Montag
+        .col.text-md-left &nbsp;7:00 - 21:00
+        .w-100
+        .col.text-md-right Dienstag
+        .col.text-md-left  &nbsp;8:00 - 18:00
+        .w-100
+        .col.text-md-right Mittwoch
+        .col.text-md-left  &nbsp;6:30 - 20:00
+        .w-100
+        .col.text-md-right Donnerstag
+        .col.text-md-left  &nbsp;8:00 - 21:00
+        .w-100
+        .col.text-md-right Freitag
+        .col.text-md-left  &nbsp;8:00 - 20:00
+        .w-100
+        .col.text-md-right Samstag
+        .col.text-md-left  10:00 - 12:00
+        .w-100
+        .col.text-md-right Sonntag
+        .col.text-md-left  17:00 - 19:00
+
+
+    .col-md-4.links.pull-right
+      %ul.list-unstyled
+        %li= link_to "Kontakt", page_path("kontakt")
+        %li= link_to "Impressum", page_path("impressum")
+        %li= link_to "Datenschutz", page_path("datenschutz")
