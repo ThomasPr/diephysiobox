@@ -3,13 +3,13 @@
   %head
     %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{name: "viewport", content: "width=device-width, initial-scale=1, shrink-to-fit=no"}/
-    %title= content_for?(:title) ? "#{content_for(:title)} • CFB Physio" : "CFB Physio"
+    %title= content_for?(:title) ? "#{content_for(:title)} • CFB Physio & Fitness" : "CFB Physio & Fitness"
     %link{rel: "canonical", href: url_for(only_path: false)}
     %meta{name: "robots", content: content_for(:robots) }
     %meta{name: "description", content: content_for(:description) }
     %meta{name: "keywords", content: content_for(:keywords) }
     %meta{property: "og:url", content: url_for(only_path: false)}
-    %meta{property: "og:title", content: content_for?(:title) ? "#{content_for(:title)} • CFB Physio" : "CFB Physio"}
+    %meta{property: "og:title", content: content_for?(:title) ? "#{content_for(:title)} • CFB Physio & Fitness" : "CFB Physio & Fitness"}
     %meta{property: "og:description", content: content_for(:description) }
     %meta{property: "og:image", content: image_url("og_image.jpg")}
     = stylesheet_link_tag    'application', media: 'all'
