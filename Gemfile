@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'capistrano-rails', '~> 1.4'
 gem 'capistrano-bundler', '~> 1.6'
+gem 'capistrano-passenger', '~> 0.2.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

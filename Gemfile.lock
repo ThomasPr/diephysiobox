@@ -68,6 +68,8 @@ GEM
       sshkit (>= 1.9.0)
     capistrano-bundler (1.6.0)
       capistrano (~> 3.1)
+    capistrano-passenger (0.2.0)
+      capistrano (~> 3.0)
     capistrano-rails (1.4.0)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
@@ -231,6 +233,7 @@ DEPENDENCIES
   bootstrap_form (~> 4.2)
   byebug
   capistrano-bundler (~> 1.6)
+  capistrano-passenger (~> 0.2.0)
   capistrano-rails (~> 1.4)
   font-awesome-rails (~> 4.7)
   haml-rails (~> 2.0)
