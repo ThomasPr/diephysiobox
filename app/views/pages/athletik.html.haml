@@ -1,0 +1,64 @@
+- content_for(:title, "Athletik")
+- content_for(:description, "Nutzen Sie das Wissen der modernen Sportmedizin und lassen Sie sich von erfahrenen Trainiern persnönlich beraten und motivieren.")
+- content_for(:keywords, "Sport, Reha, Rehabilitation, Sporttherapie, Personal Training, Kinesiotaping, Athletik")
+
+#athletik
+
+  .container
+
+    = render "picture", image: "header_athletik.jpg", sizes: [1110, 930, 690, 510], alt: "Rudergeräte"
+
+    %h1.page-title Athletik
+
+    .row.featurette
+      .col-md-12
+        %h2 Unsere Philosophie
+        %p.lead Trainiere deinen Körper mit natürlichen Bewegungen!
+        %p.lead Lass dich durch kompetente Trainer, die langjährige Erfahrung im Profisportbereich als Physiotherapeuten haben, motivieren und trainieren. Mach dich fit – ganz  ohne Leistungsdruck. Bei uns kannst du unabhängig von deinem aktuellen Trainingszustand oder deiner sportlichen Vorerfahrung einsteigen Sämtliche Übungen können auf deinen individuellen Fitnesszustand nach oben oder unten skaliert werden. Funktionelles Athletik Training ist in der Fitnesswelt kaum noch weg zu denken und findet großen Anklang bei Athleten aller Sportdisziplinen. Hier trainierst du in unserer Athletik-Box in einer Gruppe von 8-10 Personen. Persönliche Betreuung und Gruppendynamik sorgen für höchste Motivation und für jede Menge Spaß.
+        %p.lead Das Funktionelle Athletik Trainig stützt sich auf folgende 3 Säulen:
+        %ul
+          %li.lead Kraft & Weightlifting
+          %li.lead Ausdauer & Endurance
+          %li.lead Gymnastik (Koordination und Beweglichkeit) & Gymnastics
+        %p.lead Das Ziel ist, möglichst alle Speicherkapazitäten zu trainieren und damit ein gesundes Leben bis ins hohe Alter zu erreichen. Jede Trainingseinheit umfasst Mobilität, Kraft und Ausdauer. Jede Woche steht eine Übung – Skill -  aus einem der 3 Bereiche im Fokus, die speziell erlernt und technisch verbessert wird – wie zum Beispiel Seilspringen oder Handstand. Am Ende findet das Workout of the day (WOD), das Herzstück einer jeden Trainingseinheit, statt – eine kurze intensive Intervalleinheit, mit einer Vielzahl an Übungsvarianten. In jedem Training erwartet dich etwas Neues!
+        %p.lead An bestimmten Tagen finden die sogenannten „Hero Workouts“ statt. Dies sind vorgegebene Workouts die auf der ganzen Welt in unterschiedlichsten Boxen abgehalten werden und als sogenannte Benchmarks bezeichnet werden. Diese dienen zur Kontrolle, ob man sich in seiner Fitness verbessert hat.
+        %p.lead Weg von Wellness-Tempeln, back to the roots of fitness!
+
+    %hr.featurette-divider/
+
+    .row.featurette#rehabilitation-und-sporttherapie
+      .col-md-9
+        %h2.featurette-heading Rehabilitation und Sporttherapie
+        %p.lead Diese Therapie befasst sich mit dem Erstellen von differenzierten Therapie- und Trainingsplänen nach einer Verletzung bzw. einem Trauma unter Beachtung der verletzten Strukturen und ihrer Heilungsverläufe. Somit ist sie Bestandteil der funktionellen Trainingstherapie.
+      .col-md-3
+        = render "picture", image: "quadrat/sportphysio.jpg", sizes: [255, 210, 150, 350], class: "featurette-image", alt: "Sportphysiotherapie"
+
+    %hr.featurette-divider/
+
+    .row.featurette#personal-training
+      .col-md-9.order-md-2
+        %h2.featurette-heading Personal Training
+        %p.lead Nutzen Sie das Wissen der modernen der modernen Sportmedizin und lassen Sie sich von erfahrenen Trainern persönlich beraten und motivieren.
+        .lead
+          Sie möchten
+          %ul
+            %li Abnehmen?
+            %li Einen gesunden Rücken?
+            %li Fit werden und bleiben?
+            %li Medizinisch ausgebildete Trainer?
+            %li Hilfe beim Sixpack?
+        %p.lead Sprechen Sie uns persönlich an und wir erstellen mit Ihnen einen gemeinsamen Plan!
+      .col-md-3.order-md-1
+        //= link_to asset_path("personal-training.pdf"), target: "_blank" do
+        //= render "picture", image: "personal-training.png", sizes: [255, 210, 150, 350], class: "featurette-image", alt: "Personal Training"
+
+    %hr.featurette-divider/
+
+    .row.featurette#kinesiotaping
+      .col-md-9
+        %h2.featurette-heading Kinesiotaping
+        %p.lead in Kinesio-Tape ist ein elastisches, selbstklebendes und atmungsaktives Tape aus reiner Baumwolle, das direkt auf die Haut geklebt wird. Es ist angenehm zu tragen und schränkt die Bewegungsfähigkeit nicht ein. Das Tape erzielt seine Wirkung durch spezielle Anlagetechniken, die die Physiotherapeutin individuell auswählt. Kinesio-Taping ist schmerzlos, medikamentenfrei und ohne Nebenwirkungen. Kinesio-Taping kann eine physiotherapeutische Behandlung positiv unterstützen. Das Anwendungsspektrum ist breit gefächert. Es reicht von chronischen oder akuten Rückenschmerzen, Spannungskopfschmerzen und Muskelverspannungen bis zum Tennisellenbogen. Ziel dieser Therapie ist die Verbesserung von Muskelfunktion und Lymphzirkulation sowie die Unterstützung der Gelenkfunktion und die Schmerzreduktion.
+      .col-md-3
+        = render "picture", image: "quadrat/kinesio.jpg", sizes: [255, 210, 150, 350], class: "featurette-image", alt: "Kinesiotaping"
+
+    %hr.featurette-divider/

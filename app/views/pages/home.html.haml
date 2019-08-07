@@ -36,14 +36,14 @@
     .row
       .col
         .welcome.text-center
-          Herzlich Willkommen bei
-          %h1.title CFB&nbsp;PHYSIO &&nbsp;FITNESS
+          Herzlich Willkommen bei der
+          %h1.title PhysioBox
           %h2 Ihrer Praxis für Physiotherapie, Krankengymnastik, Osteopathie und Fitnesstraining im Münchener Westend
 
 
     .row
       .col-md-4.col-6.grid-image
-        =link_to page_path("sport-reha", anchor: "personal-training") do
+        =link_to page_path("athletik", anchor: "personal-training") do
           = render "picture", image: "quadrat/kinesio.jpg", sizes: [350, 290, 210, 240], alt: "Personal Training"
           .grid-caption Personal Training
       .col-md-4.col-6.grid-image
