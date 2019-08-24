@@ -69,7 +69,7 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address:              "mail.preissler.me",
     port:                 587,
-    user_name:            "kontakt@crossfitbewegt.com",
+    user_name:            "kontakt@diephysiobox.de",
     password:             "qm2pvLwoVriPTGWbTnCGjgFpeCKXRKeR6jxjKB94",
     authentication:       "plain",
     enable_starttls_auto: true
