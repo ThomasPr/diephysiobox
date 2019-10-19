@@ -60,7 +60,7 @@
         %li.nav-item{class: ('active' if current_page?(page_path("physiotherapie")))}
           = link_to "Physiotherapie", page_path("physiotherapie"), class: "nav-link"
 
-        %li.nav-item{class: ('active' if current_page?(page_path("athletik")))}
+        %li.nav-item{class: ('active' if request.fullpath.start_with?(page_path("athletik")))}
           = link_to "Athletik", page_path("athletik"), class: "nav-link"
 
         %li.nav-item{class: ('active' if current_page?(page_path("ueber-uns")))}

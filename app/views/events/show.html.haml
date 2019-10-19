@@ -1,0 +1,24 @@
+#events
+  .container
+    %h1.page-title Kurse
+
+    - @events.each do |day, events|
+      %h2
+        - case day
+        - when Date.today
+          Heute
+        - when Date.tomorrow
+          Morgen
+        - else
+          = I18n.l(day, format: '%A, %d.%m.')
+      .row
+        - events.sort{ |e| e[:start]}.reverse.each do |event|
+          .col-sm-6.col-md-4
+            .event
+              %h5.time
+                = event[:start].strftime("%k:%M")
+                Uhr
+                %br
+              %h4.name= event[:name]
+              %p.description= event[:description]
+              = link_to "Anmelden", event[:url], class: "btn btn-sm signup", target: "goteamup"
