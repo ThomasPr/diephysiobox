@@ -1,5 +1,5 @@
-- content_for(:title, "Die Physiobox - Moderne Praxis für Physiotherapie und Fitnesstraining im Münchener Westend")
-- content_for(:description, "Moderne Praxis für Physiotherapie und Fitnesstraining im Münchener Westend. Wir betrachten den Patienten ganzheitlich.")
+- content_for(:title, "Moderne Praxis für Physiotherapie und Fitnesstraining")
+- content_for(:description, "Moderne Praxis für Physiotherapie und Fitnesstraining im Münchener Westend. Einzigartige Kompetenz aus ganzheitlicher physiotherapeutischer Behandlung mit modernem Fitnesstraining.")
 - content_for(:keywords, "Physiotherapie, München, Krankengymnastik, Osteopathie, Fitnesstraining")
 
 #home{role: "main"}
@@ -43,7 +43,7 @@
 
 
     .leistungen
-      %h1 Leistungen im Überblick
+      %h2 Leistungen im Überblick
       .teaser
         %p
           Unser Angebot fußt auf zwei Säulen:
@@ -60,7 +60,7 @@
           .col-sm-5.col-md-4.col-lg-3.d-none.d-sm-block
             = render "picture", image: "quadrat/knie.jpg", sizes: [255, 210, 210, 195], alt: "Krankengymnastik"
           .col
-            %h2.pyhsio Krankengymnastik
+            %h3.pyhsio Krankengymnastik
             %p.lead
               Wir erstellen für unseren Patienten bei Krankengymnastische Behandlungstechniken ein individuelles Konzept, welches aus passiven und aktiven Behandlungstechniken besteht.
           .col-md-4.col-lg-3.d-none.d-lg-block
@@ -69,7 +69,7 @@
         .row.leistung
           .col-md-4.col-lg-3.d-none.d-lg-block
           .col
-            %h2.athletik.text-right Functional Training
+            %h3.athletik.text-right Functional Training
             %p.text-right.lead
               Bei uns trainierst in einer Gruppe von 8-10 Personen. Persönliche Betreuung und Gruppendynamik sorgen für höchste Motivation und jede Menge Spaß.
           .col-sm-5.col-md-4.col-lg-3.d-none.d-sm-block
@@ -80,7 +80,7 @@
           .col-sm-5.col-md-4.col-lg-3.d-none.d-sm-block
             = render "picture", image: "quadrat/schwanger.jpg", sizes: [255, 210, 210, 195], alt: "Behandlung von Schwangeren"
           .col
-            %h2.pyhsio Behandlung von Schwangeren
+            %h3.pyhsio Behandlung von Schwangeren
             %p.lead
               Wir begleiten Sie in Ihrer Schwangerschaft und helfen typischen Beschwerden in der Anfangsphase und im späteren Verlauf der Schwangerschaft entgegen zu wirken.
           .col-md-4.col-lg-3.d-none.d-lg-block
@@ -89,7 +89,7 @@
         .row.leistung
           .col-md-4.col-lg-3.d-none.d-lg-block
           .col
-            %h2.athletik.text-right Personal Training
+            %h3.athletik.text-right Personal Training
             %p.text-right.lead
               Nutzen Sie das Wissen der modernen Sportmedizin und lassen Sie sich von erfahrenen Trainern persönlich beraten und motivieren.
           .col-sm-5.col-md-4.col-lg-3.d-none.d-sm-block
@@ -100,7 +100,7 @@
           .col-sm-5.col-md-4.col-lg-3.d-none.d-sm-block
             = render "picture", image: "quadrat/ruecken.jpg", sizes: [255, 210, 210, 195], alt: "Osteopathische Behandlung"
           .col
-            %h2.pyhsio Osteophatische Behandlungen
+            %h3.pyhsio Osteophatische Behandlungen
             %p.lead
               Mithilfe von Osteophatische Behandlungen analysieren wir die Ursachen von Funktionsstörungen und betrachten den Patienten in seiner Gesamtheit statt einzelner Beschwerden oder Krankheiten.
           .col-md-4.col-lg-3.d-none.d-lg-block
@@ -109,7 +109,7 @@
         .row.leistung
           .col-md-4.col-lg-3.d-none.d-lg-block
           .col
-            %h2.athletik.text-right Rehabilitation und Sporttherapie
+            %h3.athletik.text-right Rehabilitation und Sporttherapie
             %p.text-right.lead
               Wir erstellen differenzierte Therapie- und Trainingsplänen nach einer Verletzung oder einem Trauma unter Beachtung der verletzten Strukturen und ihrer Heilungsverläufe.
           .col-sm-5.col-md-4.col-lg-3.d-none.d-sm-block
