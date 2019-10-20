@@ -20,6 +20,9 @@ $dark-green: rgb(0, 128, 0)
 $medium-green: rgb(48, 176, 48)
 $light-green: rgb(96, 224, 96)
 
+$medium-purple: #b232b1
+
+
 @import "home"
 @import "ueber-uns"
 @import "physiotherapie"
@@ -28,10 +31,15 @@ $light-green: rgb(96, 224, 96)
 @import "kontakt"
 @import "datenschutz"
 
+.pyhsio
+  color: $medium-green
+
+.athletik
+  color: $medium-purple
+
 body
   color: #5a5a5a
   //font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
-
 
 a, a:hover, a:active
   color: inherit
@@ -85,21 +93,23 @@ h1.page-title
     padding-left: 0
 
   .nav-link
-    color: $dark-green
     text-align: right
     font-weight: 500
+    padding: 5px
 
     @media(min-width: 991px)
-      padding: 15px !important
+      margin: 5px
       font-size: 1.3rem
 
 
-
   .active .nav-link, a.nav-link:hover, a.nav-link:active
-      color: $light-green
+    color: white
+    background-color: $medium-green
+    border-radius: 0.3em
+
 
   .navbar-toggler
-    background-color: $dark-green
+    background-color: $medium-green
     color: rgba(255, 255, 255, 0.5)
     border-color: rgba(255, 255, 255, 0.1)
 

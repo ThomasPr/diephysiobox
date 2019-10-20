@@ -1,4 +1,5 @@
-- content_for(:description, "Moderne Praxis für Physiotherapie, Krankengymnastik, Osteopathie und Fitnesstraining im Münchener Westend. Wir es uns zur Aufgabe den Patienten ganzheitlich zu betrachten.")
+- content_for(:title, "Die Physiobox - Moderne Praxis für Physiotherapie und Fitnesstraining im Münchener Westend")
+- content_for(:description, "Moderne Praxis für Physiotherapie und Fitnesstraining im Münchener Westend. Wir betrachten den Patienten ganzheitlich.")
 - content_for(:keywords, "Physiotherapie, München, Krankengymnastik, Osteopathie, Fitnesstraining")
 
 #home{role: "main"}
@@ -38,31 +39,78 @@
         .welcome.text-center
           Herzlich Willkommen bei der
           %h1.title Physiobox
-          %h2 Ihrer Praxis für Physiotherapie, Krankengymnastik, Osteopathie und Fitnesstraining im Münchener Westend
+          %h2 Ihrer Praxis für ganzheitliche Physiotherapie, Osteopathie und modernem Fitnesstraining im Münchener Westend
 
 
-    .row
-      .col-md-4.col-6.grid-image
-        =link_to page_path("athletik", anchor: "personal-training") do
-          = render "picture", image: "quadrat/kinesio.jpg", sizes: [350, 290, 210, 240], alt: "Personal Training"
-          .grid-caption Personal Training
-      .col-md-4.col-6.grid-image
-        = link_to page_path("physiotherapie", anchor: "krankengymnastik") do
-          = render "picture", image: "quadrat/knie.jpg", sizes: [350, 290, 210, 240], alt: "Krankengymnastik"
-          .grid-caption Krankengymnastik
-      .col-md-4.col-6.grid-image
-        = link_to page_path("physiotherapie", anchor: "klassische-massage") do
-          = render "picture", image: "quadrat/massage.jpg", sizes: [350, 290, 210, 240], alt: "Massage"
-          .grid-caption Massage
-      .col-md-4.col-6.grid-image
-        = link_to page_path("physiotherapie", anchor: "osteopathisches-behandlungskonzept") do
-          = render "picture", image: "quadrat/ruecken.jpg", sizes: [350, 290, 210, 240], alt: "Osteopathische Behandlung"
-          .grid-caption Osteopathische Behandlung
-      .col-md-4.col-6.grid-image
-        = link_to page_path("physiotherapie", anchor: "manuelle-therapie") do
-          = render "picture", image: "quadrat/schulter.jpg", sizes: [350, 290, 210, 240], alt: "Manuelle Therapie"
-          .grid-caption Manuelle Therapie
-      .col-md-4.col-6.grid-image
-        = link_to page_path("physiotherapie", anchor: "behandlung-von-schwangeren") do
-          = render "picture", image: "quadrat/schwanger.jpg", sizes: [350, 290, 210, 240], alt: "Behandlung von Schwangeren"
-          .grid-caption Behandlung von Schwangeren
+    .leistungen
+      %h1 Leistungen im Überblick
+      .teaser
+        %p
+          Unser Angebot fußt auf zwei Säulen:
+          %span.highlight.pyhsio Physiotherapie
+          und
+          %span.highlight.athletik Athletik
+          %br
+          %p.explainer Die Kombination dieser beiden Disziplinen führt zu einer einzigartigen Kompetenz ganzheitlicher physiotherapeutischer Behandlung mit modernem Fitnesstraining.
+
+
+
+      = link_to page_path("physiotherapie") do
+        .row.leistung
+          .col-sm-5.col-md-4.col-lg-3.d-none.d-sm-block
+            = render "picture", image: "quadrat/knie.jpg", sizes: [255, 210, 210, 195], alt: "Krankengymnastik"
+          .col
+            %h2.pyhsio Krankengymnastik
+            %p.lead
+              Wir erstellen für unseren Patienten bei Krankengymnastische Behandlungstechniken ein individuelles Konzept, welches aus passiven und aktiven Behandlungstechniken besteht.
+          .col-md-4.col-lg-3.d-none.d-lg-block
+
+      = link_to page_path("athletik") do
+        .row.leistung
+          .col-md-4.col-lg-3.d-none.d-lg-block
+          .col
+            %h2.athletik.text-right Functional Training
+            %p.text-right.lead
+              Bei uns trainierst in einer Gruppe von 8-10 Personen. Persönliche Betreuung und Gruppendynamik sorgen für höchste Motivation und jede Menge Spaß.
+          .col-sm-5.col-md-4.col-lg-3.d-none.d-sm-block
+            = render "picture", image: "quadrat/stange.jpg", sizes: [255, 210, 210, 195], alt: "Functional Training"
+
+      = link_to page_path("physiotherapie", anchor: "behandlung-von-schwangeren") do
+        .row.leistung
+          .col-sm-5.col-md-4.col-lg-3.d-none.d-sm-block
+            = render "picture", image: "quadrat/schwanger.jpg", sizes: [255, 210, 210, 195], alt: "Behandlung von Schwangeren"
+          .col
+            %h2.pyhsio Behandlung von Schwangeren
+            %p.lead
+              Wir begleiten Sie in Ihrer Schwangerschaft und helfen typischen Beschwerden in der Anfangsphase und im späteren Verlauf der Schwangerschaft entgegen zu wirken.
+          .col-md-4.col-lg-3.d-none.d-lg-block
+
+      = link_to page_path("athletik", anchor: "personal-training") do
+        .row.leistung
+          .col-md-4.col-lg-3.d-none.d-lg-block
+          .col
+            %h2.athletik.text-right Personal Training
+            %p.text-right.lead
+              Nutzen Sie das Wissen der modernen Sportmedizin und lassen Sie sich von erfahrenen Trainern persönlich beraten und motivieren.
+          .col-sm-5.col-md-4.col-lg-3.d-none.d-sm-block
+            = render "picture", image: "quadrat/kinesio.jpg", sizes: [255, 210, 210, 195], alt: "Krankengymnastik"
+
+      = link_to page_path("physiotherapie", anchor: "osteopathisches-behandlungskonzept") do
+        .row.leistung
+          .col-sm-5.col-md-4.col-lg-3.d-none.d-sm-block
+            = render "picture", image: "quadrat/ruecken.jpg", sizes: [255, 210, 210, 195], alt: "Osteopathische Behandlung"
+          .col
+            %h2.pyhsio Osteophatische Behandlungen
+            %p.lead
+              Mithilfe von Osteophatische Behandlungen analysieren wir die Ursachen von Funktionsstörungen und betrachten den Patienten in seiner Gesamtheit statt einzelner Beschwerden oder Krankheiten.
+          .col-md-4.col-lg-3.d-none.d-lg-block
+
+      = link_to page_path("athletik", anchor: "rehabilitation-und-sporttherapie") do
+        .row.leistung
+          .col-md-4.col-lg-3.d-none.d-lg-block
+          .col
+            %h2.athletik.text-right Rehabilitation und Sporttherapie
+            %p.text-right.lead
+              Wir erstellen differenzierte Therapie- und Trainingsplänen nach einer Verletzung oder einem Trauma unter Beachtung der verletzten Strukturen und ihrer Heilungsverläufe.
+          .col-sm-5.col-md-4.col-lg-3.d-none.d-sm-block
+            = render "picture", image: "quadrat/sportphysio.jpg", sizes: [255, 210, 210, 195], alt: "Sportphysiotherapie"
