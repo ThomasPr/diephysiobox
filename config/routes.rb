@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   get '/home', to: redirect('/')
   get 'sitemap.xml', to: 'home#sitemap', format: 'xml', as: :sitemap
 
-  get 'athletik/kurse', to: 'events#show'
-
   get  'kontakt', to: 'kontakt#new'
   post 'kontakt', to: 'kontakt#create'
 
