@@ -65,3 +65,132 @@
         = render "picture", image: "quadrat/kinesio.jpg", sizes: [255, 210, 150, 350], class: "featurette-image", alt: "Kinesiotaping"
 
     %hr.featurette-divider/
+
+    .row.featurette#kursangebot
+      .col-md-12
+        %h2.featurette-heading Unser Kursangebot
+
+    .row.events
+      .col-md-12
+        .table-responsive
+          %table.table.table-borderless
+            %thead
+              %tr
+                %th{scope: "col"} Montag
+                %th{scope: "col"} Dienstag
+                %th{scope: "col"} Mittwoch
+                %th{scope: "col"} Donnerstag
+                %th{scope: "col"} Freitag
+                %th{scope: "col"} Samstag
+                %th{scope: "col"} Sonntag
+            %tbody
+              %tr
+                %td
+                  .event
+                    .time 7:00 Uhr
+                    .title Intervall & Ausdauer
+                %td
+                %td
+                  .event
+                    .time 6:30 Uhr
+                    .title Fitness
+                %td
+                %td
+                %td
+                %td
+
+              %tr
+                %td
+                %td
+                %td
+                %td
+                %td
+                %td
+                  .event
+                    .time 10:00 Uhr
+                    .title Fitness
+                %td
+
+              %tr
+                %td
+                %td
+                %td
+                %td
+                %td
+                %td
+                  .event
+                    .time 11:00 Uhr
+                    .title Fitness
+                %td
+
+              %tr
+                %td
+                  .event
+                    .time 18:00 Uhr
+                    .title Fitness
+                %td
+                  .event
+                    .time 18:00 Uhr
+                    .title Fitness
+                %td
+                  .event
+                    .time 18:00 Uhr
+                    .title Technik an&nbsp;der Langhantel
+                %td
+                  .event
+                    .time 18:00 Uhr
+                    .title Fitness
+                %td
+                  .event
+                    .time 18:00 Uhr
+                    .title Fitness
+                %td
+                %td
+
+              %tr
+                %td
+                  .event
+                    .time 19:00 Uhr
+                    .title Fitness
+                %td
+                  .event
+                    .time 19:00 Uhr
+                    .title Fitness
+                %td
+                  .event
+                    .time 19:00 Uhr
+                    .title Fitness
+                %td
+                  .event
+                    .time 19:00 Uhr
+                    .title Fitness
+                %td
+                  .event
+                    .time 19:00 Uhr
+                    .title OpenGym
+                %td
+                %td
+
+              %tr
+                %td
+                  .event
+                    .time 20:00 Uhr
+                    .title Technik an&nbsp;der Langhantel
+                %td
+                  .event
+                    .time 20:00 Uhr
+                    .title Fitness
+                %td
+                  .event
+                    .time 20:00 Uhr
+                    .title Fitness
+                %td
+                  .event
+                    .time 20:00 Uhr
+                    .title Fitness
+                %td
+                %td
+                %td
+
+      .col-md-12.text-right
+        = link_to "Anmelden auf TeamUp", "https://goteamup.com/p/324668-die-physiobox-gmbh/#!week", class: "goteamup", target: "goteamup"

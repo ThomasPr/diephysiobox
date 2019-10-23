@@ -12,11 +12,32 @@
   .featurette-image
     border-radius: 10%
 
-  .event-btn
-    color: white
-    background-color: $medium-green
 
-    &:hover
-      border: 1px solid $medium-green
-      color: $medium-green
-      background-color: white
+  #kursangebot h2
+    margin-bottom: 1rem
+
+  .goteamup
+    color: $medium-green
+
+  .events
+
+    thead
+      border-bottom: 1px solid #dee2e6
+
+    td + td, th + th
+      border-left: 1px solid #dee2e6
+
+    td
+      width: calc(100%/7)
+      min-width: 150px
+
+    .event
+      .time
+        font-size: 0.9rem
+        white-space: nowrap
+
+      .title
+        font-weight: 450
+        font-size: 1.1rem
+        color: $medium-green
+        line-height: 1.25rem
