@@ -57,8 +57,8 @@
         %li.nav-item{class: ('active' if request.fullpath.start_with?(page_path("athletik")))}
           = link_to "Athletik", page_path("athletik"), class: "nav-link"
 
-        %li.nav-item{class: ('active' if current_page?(page_path("ueber-uns")))}
-          = link_to "Über uns", page_path("ueber-uns"), class: "nav-link"
+        %li.nav-item{class: ('active' if current_page?(page_path("team")))}
+          = link_to "Team", page_path("team"), class: "nav-link"
 
         %li.nav-item{class: ('active' if current_page?(kontakt_path))}
           = link_to "Kontakt", kontakt_path, class: "nav-link"
