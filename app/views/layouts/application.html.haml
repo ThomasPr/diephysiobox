@@ -15,7 +15,7 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application', async: Rails.env.production?
     = favicon_link_tag "favicon.png", type: "image/png"
-    %script{type: "application/ld+json"}= render "schema.json"
+    %script{type: "application/ld+json"}= content_for?(:schema) ? render("schemas/" + content_for(:schema)) : ""
 
   %body
     %header= render "header"

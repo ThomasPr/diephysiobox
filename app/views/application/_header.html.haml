@@ -62,3 +62,6 @@
 
         %li.nav-item{class: ('active' if current_page?(kontakt_path))}
           = link_to "Kontakt", kontakt_path, class: "nav-link"
+
+        %li.nav-item{class: ('active' if current_page?(page_path("karriere")))}
+          = link_to "Karriere", page_path("karriere"), class: "nav-link"
