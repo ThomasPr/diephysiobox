@@ -11,7 +11,7 @@
     %meta{property: "og:url", content: url_for(only_path: false)}
     %meta{property: "og:title", content: content_for?(:title) ? "#{content_for(:title)} • Die Physiobox" : "Die Physiobox"}
     %meta{property: "og:description", content: content_for(:description) }
-    %meta{property: "og:image", content: image_url("og_image.jpg")}
+    %meta{property: "og:image", content: image_url("diephysiobox.png?width=600")}
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application', async: Rails.env.production?
     = favicon_link_tag "favicon.png", type: "image/png"
