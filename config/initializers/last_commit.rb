@@ -1,1 +1,1 @@
-LAST_COMMIT = `git log -1 --date=short --pretty=format:%cd --quiet`
+LAST_COMMIT = File.atime(RAILS_ROOT + "/REVISION")
