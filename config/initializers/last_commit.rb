@@ -1,1 +1,1 @@
-LAST_COMMIT = File.atime(RAILS_ROOT + "/REVISION")
+LAST_COMMIT = File.atime("REVISION")
