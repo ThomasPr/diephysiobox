@@ -7,30 +7,37 @@
 
   .container
 
-    #carouselExampleIndicators.carousel.slide{"data-ride" => "carousel"}
-      %ol.carousel-indicators
-        %li.active{"data-slide-to" => "0", "data-target" => "#carouselExampleIndicators"}
-        %li{"data-slide-to" => "1", "data-target" => "#carouselExampleIndicators"}
-        %li{"data-slide-to" => "2", "data-target" => "#carouselExampleIndicators"}
-        %li{"data-slide-to" => "3", "data-target" => "#carouselExampleIndicators"}
-        %li{"data-slide-to" => "4", "data-target" => "#carouselExampleIndicators"}
-      .carousel-inner
-        .carousel-item.active
-          = render "picture", image: "slider/ruecken.jpg", sizes: [1110, 930, 690, 510], alt: "Behandlung Rücken"
-        .carousel-item
-          = render "picture", image: "slider/behandlungsraum.jpg", sizes: [1110, 930, 690, 510], alt: "Behandlungsraum"
-        .carousel-item
-          = render "picture", image: "slider/hand.jpg", sizes: [1110, 930, 690, 510], alt: "Erklärung an einem Handmodell"
-        .carousel-item
-          = render "picture", image: "slider/schwanger.jpg", sizes: [1110, 930, 690, 510], alt: "Behandlung Schwanger"
-        .carousel-item
-          = render "picture", image: "slider/theraband.jpg", sizes: [1110, 930, 690, 510], alt: "Behandlung mit TheraBand"
-      %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleIndicators", :role => "button"}
-        %span.carousel-control-prev-icon{"aria-hidden" => "true"}
-        %span.sr-only Previous
-      %a.carousel-control-next{"data-slide" => "next", :href => "#carouselExampleIndicators", :role => "button"}
-        %span.carousel-control-next-icon{"aria-hidden" => "true"}
-        %span.sr-only Next
+    .row
+      .col
+        =link_to "Aktuelles zur Corona Virus Pandemie", root_path(anchor: "corona"), class: "banner"
+
+    .row
+      .col
+
+        #carouselExampleIndicators.carousel.slide{"data-ride" => "carousel"}
+          %ol.carousel-indicators
+            %li.active{"data-slide-to" => "0", "data-target" => "#carouselExampleIndicators"}
+            %li{"data-slide-to" => "1", "data-target" => "#carouselExampleIndicators"}
+            %li{"data-slide-to" => "2", "data-target" => "#carouselExampleIndicators"}
+            %li{"data-slide-to" => "3", "data-target" => "#carouselExampleIndicators"}
+            %li{"data-slide-to" => "4", "data-target" => "#carouselExampleIndicators"}
+          .carousel-inner
+            .carousel-item.active
+              = render "picture", image: "slider/ruecken.jpg", sizes: [1110, 930, 690, 510], alt: "Behandlung Rücken"
+            .carousel-item
+              = render "picture", image: "slider/behandlungsraum.jpg", sizes: [1110, 930, 690, 510], alt: "Behandlungsraum"
+            .carousel-item
+              = render "picture", image: "slider/hand.jpg", sizes: [1110, 930, 690, 510], alt: "Erklärung an einem Handmodell"
+            .carousel-item
+              = render "picture", image: "slider/schwanger.jpg", sizes: [1110, 930, 690, 510], alt: "Behandlung Schwanger"
+            .carousel-item
+              = render "picture", image: "slider/theraband.jpg", sizes: [1110, 930, 690, 510], alt: "Behandlung mit TheraBand"
+          %a.carousel-control-prev{"data-slide" => "prev", :href => "#carouselExampleIndicators", :role => "button"}
+            %span.carousel-control-prev-icon{"aria-hidden" => "true"}
+            %span.sr-only Previous
+          %a.carousel-control-next{"data-slide" => "next", :href => "#carouselExampleIndicators", :role => "button"}
+            %span.carousel-control-next-icon{"aria-hidden" => "true"}
+            %span.sr-only Next
 
 
     .row
@@ -44,7 +51,7 @@
     .aktuelles
       .row.justify-content-center
         .col-lg-8
-          %h2 Aktuelles zur Corona Virus Pandemie
+          %h2#corona Aktuelles zur Corona Virus Pandemie
 
           %p.lead Liebe Patientinnen und Patienten,
           %p.lead im Zusammenhang mit der aktuellen Entwicklung zur Corona Virus Pandemie sind wir sehr bemüht die Situation für alle Beteiligten bestmöglich zu gestalten.
