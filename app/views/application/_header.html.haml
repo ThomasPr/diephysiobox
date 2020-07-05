@@ -1,67 +1,18 @@
-.top-bar
+%header
+  .top-bar
   .container
-    .text-right
-      %ul.list-inline
-        %li.list-inline-item
-          .dropdown
-            %a.btn{role: "button", "data-toggle" => "dropdown", "aria-haspopup" => "true", "aria-expanded" => "false"}
 
-              = fa_icon "clock-o"
-              Öffnungszeiten
-            .dropdown-menu.p-4
-              %table
-                %tbody
-                  %tr
-                    %td Montag
-                    %td.text-center 7:30 - 18:30
-                  %tr
-                    %td Dienstag
-                    %td.text-center 8:00 - 18:00
-                  %tr
-                    %td Mittwoch
-                    %td.text-center 7:30 - 18:30
-                  %tr
-                    %td Donnerstag
-                    %td.text-center 8:00 - 18:00
-                  %tr
-                    %td Freitag
-                    %td.text-center 8:00 - 18:00
+    %nav.level.is-mobile
+      .level-left
+        .level-item
+          = link_to root_path do
+            = image_tag "#{@logo}.png", class: "brand"
+      .level-right
+        .level-item
+          - physio_active = "selected" if request.fullpath.start_with?(page_path("physio"))
+          = link_to "Physio", page_path("physio"), class: "button is-rounded physio #{physio_active}"
+        .level-item
+          - athletik_active = "selected" if request.fullpath.start_with?(page_path("athletik"))
+          = link_to "Athletik", page_path("athletik"), class: "button is-rounded athletik #{athletik_active}"
 
-        %li.list-inline-item
-          = fa_icon "phone"
-          (089) 95 49 37 10
-        %li.list-inline-item
-          = link_to kontakt_path do
-            = fa_icon "envelope"
-            Kontakt
-
-
-.container
-  %nav.navbar.navbar-expand-md.main-nav
-    %span.navbar-brand
-      = link_to root_path do
-        = render "picture", image: "diephysiobox.png", sizes: [210, 210, 210, 158], alt: "Logo"
-    %button.navbar-toggler.ml-auto{"aria-controls" => "navbarCollapse", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarCollapse", "data-toggle" => "collapse", :type => "button"}
-      %span.navbar-toggler-icon
-
-
-    #navbarCollapse.collapse.navbar-collapse
-      %ul.navbar-nav.ml-auto
-
-        %li.nav-item{class: ('active' if current_page?(root_path))}
-          = link_to "Home", root_path, class: "nav-link"
-
-        %li.nav-item{class: ('active' if current_page?(page_path("physiotherapie")))}
-          = link_to "Physiotherapie", page_path("physiotherapie"), class: "nav-link"
-
-        %li.nav-item{class: ('active' if request.fullpath.start_with?(page_path("athletik")))}
-          = link_to "Athletik", page_path("athletik"), class: "nav-link"
-
-        %li.nav-item{class: ('active' if current_page?(page_path("team")))}
-          = link_to "Team", page_path("team"), class: "nav-link"
-
-        %li.nav-item{class: ('active' if current_page?(kontakt_path))}
-          = link_to "Kontakt", kontakt_path, class: "nav-link"
-
-        %li.nav-item{class: ('active' if current_page?(page_path("karriere")))}
-          = link_to "Karriere", page_path("karriere"), class: "nav-link"
+  = render "nav_#{@type}" unless content_for?(:skip_nav)

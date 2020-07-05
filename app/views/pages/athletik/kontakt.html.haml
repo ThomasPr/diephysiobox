@@ -1,0 +1,101 @@
+- content_for(:title, "Kontakt")
+- content_for(:description, "Nehmen Sie direkt Kontakt mit uns auf. Wir melden uns umgehend bei Ihnen.")
+- content_for(:keywords, "Kontakt, email, Telefon")
+
+#kontakt
+
+  %section.page-header
+    .container
+      %h1.title.is-1 Kontakt
+
+  %section.section
+    .container
+      .columns
+        .column
+          #mapContainer
+            %img#map
+
+        .column
+          %form#form
+            .field
+              %label.label{for: "input-name"}
+                .icon
+                  .fas.fa-user
+                Name
+              .control
+                %input#input-name.input.is-primary{type: "text", name: "name", required: true}
+            .field
+              %label.label{for: "input-email"}
+                .icon
+                  .fas.fa-envelope
+                E-Mail Adresse
+              .control
+                %input#input-email.input.is-primary{type: "email", name: "email", required: true}
+            .field
+              %label.label{for: "input-subject"}
+                .icon
+                  .fas.fa-comment
+                Betreff
+              .control
+                %input#input-subject.input.is-primary{type: "text", name: "subject", required: true}
+            .field
+              %label.label{for: "input-message"}
+                .icon
+                  .fas.fa-pencil-alt
+                Nachricht
+              .control
+                %textarea#input-message.textarea.is-primary{rows: "6", name: "message", required: true}
+            .field.submit-button
+              .control
+                %button#submit.button.is-primary.is-fullwidth.is-medium.is-outlined{type: "submit"} Absenden
+
+
+
+:javascript
+  const updateMap = () => {
+    const mapWidth = document.getElementById("mapContainer").clientWidth;
+    const mapHeight = document.getElementById("form").clientHeight;
+
+    document.getElementById("map").src =
+      "https://maps.googleapis.com/maps/api/staticmap" +
+      "?center=48.134,11.523592" +
+      "&markers=color:0x30b030%7C48.134,11.523592" +
+      "&zoom=13" +
+      `&size=${mapWidth}x${mapHeight}` +
+      "&scale=" + (window.devicePixelRatio || 1) +
+      "&key=AIzaSyBC7IgkmHJLl7C42c1_KWBHBYouPXLNBxs";
+  }
+
+  window.addEventListener("resize", updateMap);
+  window.addEventListener("DOMContentLoaded", updateMap);
+
+
+  const updateFormMessage = (style, message) => document.querySelector(".submit-button .control").innerHTML = `<strong class="${style}">${message}</strong>`;
+  const successMessage = () => updateFormMessage("has-text-primary", "Vielen Dank für Ihre Nachricht");
+  const errorMessage   = () => updateFormMessage("has-text-danger", "Es ist ein Fehler aufgetreten.<br>Bitte versuchen Sie es später erneut");
+
+  const submitForm = () => {
+    const options = {
+      method: "POST",
+      headers: { "Content-Type": "application/json;charset=utf-8" },
+      body: JSON.stringify(Object.fromEntries(new FormData(event.target)))
+    }
+
+    fetch("/kontakt", options)
+      .then((response) => response.ok ? successMessage() : errorMessage())
+      .catch(() => errorMessage());
+  }
+
+  const disableInputs = () => {
+    document
+      .querySelectorAll("#kontakt input, #kontakt textarea, #kontakt button")
+      .forEach(input => input.disabled = true);
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      submitForm();
+      disableInputs();
+    });
+  });

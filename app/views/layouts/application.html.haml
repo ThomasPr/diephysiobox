@@ -12,16 +12,18 @@
     %meta{property: "og:title", content: content_for?(:title) ? "#{content_for(:title)} • Die Physiobox" : "Die Physiobox"}
     %meta{property: "og:description", content: content_for(:description) }
     %meta{property: "og:image", content: image_url("diephysiobox.png?width=300")}
-    = stylesheet_link_tag    'application', media: 'all'
-    = javascript_include_tag 'application', async: Rails.env.production?
+    = javascript_include_tag 'application'
     = favicon_link_tag "/favicon.ico"
     %script{type: "application/ld+json"}= content_for?(:schema) ? render("schemas/" + content_for(:schema)) : ""
+
+    - style = request.fullpath.start_with?("/physio") ? "physio" : request.fullpath.start_with?("/athletik") ? "athletik" : "home"
+    = stylesheet_link_tag style, media: 'all'
 
     - [16, 32, 48, 57, 76, 96, 120, 128, 152, 167, 180, 192, 512].each do |size|
       %link{rel: "apple-touch-icon", sizes: "#{size}x#{size}", href: image_url("diephysiobox.png?width=#{size}")}
       %link{rel: "icon", sizes: "#{size}x#{size}", href: image_url("diephysiobox.png?width=#{size}")}
 
   %body
-    %header= render "header"
+    = render "header"
     %main= yield
-    %footer= render "footer"
+    = render "footer"

@@ -1,0 +1,52 @@
+$physio: #29A35A
+$athletik: #854487
+
+$primary: $physio
+$secondary: $athletik
+
+
+.top-bar
+  background-color: $athletik !important
+
+
+#home
+
+  .teaser
+    a
+      font-weight: bold
+
+    a:hover
+      text-decoration: underline
+
+
+    a.physio, a.physio:hover
+      color: $physio !important
+      text-decoration-color: $physio
+
+    a.athletik, a.athletik:hover
+      color: $athletik !important
+      text-decoration-color: $athletik
+
+
+  section.physio
+    background-color: rgba($physio, .1)
+    padding: 1.5rem
+    margin-bottom: 3rem
+
+    h2, a
+      color: $physio
+      text-decoration-color: $physio
+
+  section.athletik
+    background-color: rgba($athletik, .1)
+    padding: 1.5rem
+    margin-bottom: 3rem
+
+    h2, a
+      color: $athletik
+      text-decoration-color: $athletik
+
+  section.physio img, section.athletik img
+    border-radius: 10%
+
+@import "application"

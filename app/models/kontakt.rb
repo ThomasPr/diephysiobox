@@ -3,7 +3,7 @@ class Kontakt
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
-  attr_accessor :name, :subject, :email, :message, :delivered
+  attr_accessor :name, :subject, :email, :message
 
   validates :name,    presence: true, length: { maximum: 255 }
   validates :subject, presence: true, length: { maximum: 255 }

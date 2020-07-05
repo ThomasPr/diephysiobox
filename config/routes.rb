@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get '/home', to: redirect('/')
   get 'sitemap.xml', to: 'home#sitemap', format: 'xml', as: :sitemap
 
-  get  'kontakt', to: 'kontakt#new'
   post 'kontakt', to: 'kontakt#create'
 
   get "/*id" => 'pages#show', as: :page, format: false

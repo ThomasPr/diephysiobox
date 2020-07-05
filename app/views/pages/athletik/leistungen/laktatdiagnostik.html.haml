@@ -1,0 +1,29 @@
+#athletik-laktatdiagnostik
+
+%section.page-header
+  .container
+    %h1.title.is-1 Laktatdiagnostik
+
+%section.section
+  .container
+    .columns.columns-reverse
+      = render "pages/athletik/leistungen/navigation"
+
+      .column.content.columnize
+        %h2 Was ist Laktat?
+        %p Laktat ist ein Stoffwechselprodukt, das im Zuge des anaeroben Kohlenhydratstoffwechsel, also der Gewinnung von Energie aus Zucker ohne die Nutzung von Sauerstoff, entsteht.
+        %p= image_tag image_url("laktatdiagnostik/laktat1.jpg"), alt: "Laktatmessung"
+
+        %h2 Was erwartet euch bei einer Laktatdiagnostik?
+        %p Eine Laktatdiagnostik wird auf einem Ergometer, beispielsweise einem Laufband- oder einem Fahrradergometer durchgeführt. Dies hängt davon ab, für welche Bewegungsform eure Ergebnisse gelten sollen. Seid ihr beispielsweise Läufer, werdet ihr natürlich auf dem Laufband belastet.
+        %p Ausgehend von einer individuell abgestimmten Startbelastung wird die Intensität nach einer bestimmten Zeit, üblicherweise sind das drei Minuten, um ein bestimmtes Inkrement gesteigert. Das ist dann eine „Stufe“. Dies wird so lange durchgeführt, bis ihr nahe der Ausbelastung oder sogar ganz ausbelastet seid. Dieses Vorgehen wird als Stufentest bezeichnet.
+        %p Nach jeder Belastungsstufe wird euch ein kleiner Tropfen Blut aus dem Ohrläppchen oder der Fingerkuppe entnommen, auf dessen Basis dann euer Blutlaktatwert bestimmt wird.
+
+        %h2 Welche Aussage hat eine Laktatdiagnostik?
+        %p Während einer Belastung wie beispielsweise Laufen oder Radfahren nutzt unser Körper vorrangig zwei verschiedene Energieträger – Kohlenhydrate (Zucker) und Fette.
+        %p Sowohl Kohlenhydrate als auch Fette können aerob, das heißt mit Sauerstoff, verstoffwechselt werden, während Kohlenhydrate als einzige auch anaerob genutzt werden können. Der aerobe Stoffwechsel liefert dem Körper viel Energie – viel mehr als der Anaerobe! Allerdings benötigen diese Stoffwechselvorgänge – vor allem der Fettstoffwechsel – enorm viele Ressourcen.
+        %p Eure Muskelzellen enthalten kleine Kraftwerke, die Mitochondrien. Diese sind für den aeroben Stoffwechsel notwendig. Darüber hinaus enthalten eure Muskelzellen Enzyme, die den aeroben Kohlenhydrat- und Fettstoffwechsel begünstigen. Beide Faktoren zusammen bilden eure aerobe Kapazität und legen fest, wie viel Energie ihr pro Zeiteinheit maximal aerob aus Zucker und Fett herausholen könnt. Ist diese aerobe Kapazität recht stark ausgelastet – beispielsweise weil ihr schneller lauft, schaltet der Körper den anaeroben Kohlenhydratstoffwechsel vermehrt dazu, um mehr Energie pro Zeiteinheit herstellen zu können. Das tut er bereits deutlich bevor die aerobe Kapazität wirklich am Limit ist.
+        %p Auf dieser Basis lassen sich in Bezug auf die Laktatdiagnostik mehrere Schlüsse ziehen:
+        %p Je höher die Belastungsintensität ist, an welcher der Laktatwert anzusteigen beginnt, desto höher ist die aerobe Kapazität, da der Körper mehr Energie pro Zeiteinheit auf aerobem Wege bereitstellen kann
+        %p Mit der Kenntnis, in welchen Belastungszonen bereits vermehrt anaerober Stoffwechsel stattfindet und in welchen noch nicht, lassen sich individuelle Trainingsempfehlungen erstellen, um beispielsweise die aerobe Kapazität zu erhöhen.
+        %p= image_tag image_url("laktatdiagnostik/laktat2.jpg"), alt: "Besprechen der Ergebnisse"

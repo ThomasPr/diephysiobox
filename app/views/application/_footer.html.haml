@@ -1,43 +1,48 @@
-.container
-  .row
-    .col-md-4.address
-      %address
-        %ul.list-unstyled
-          %li
-            .main Die Physiobox GmbH
-          %li
-            = fa_icon "map-marker"
+%footer#footer.footer
+  .container
+    .columns
+
+      .column.content.address
+        %address
+          %h5.title.is-5 Die Physiobox GmbH
+          %p
+            .icon
+              .fas.fa-map-marker-alt
             Westendstraße 185
-          %li
-            = fa_icon "invalid"
+            %br
+            .icon
+              .fas.fa-invalid
             80686 München
-          %li
-            = fa_icon "phone"
+          %p
+            .icon
+              .fas.fa-phone
             (089) 95 49 37 10
-          %li
-            = fa_icon "envelope"
+          %p
+            .icon
+              .fas.fa-envelope
             = mail_to "mail@diephysiobox.de"
-    .col-md-4.hours.center
-      .main.text-md-center Öffnungszeiten
-      .row
-        .col.text-md-right Montag
-        .col.text-md-left &nbsp;7:30 - 18:30
-        .w-100
-        .col.text-md-right Dienstag
-        .col.text-md-left  &nbsp;8:00 - 18:00
-        .w-100
-        .col.text-md-right Mittwoch
-        .col.text-md-left  &nbsp;7:30 - 18:30
-        .w-100
-        .col.text-md-right Donnerstag
-        .col.text-md-left  &nbsp;8:00 - 18:00
-        .w-100
-        .col.text-md-right Freitag
-        .col.text-md-left  &nbsp;8:00 - 18:00
 
+      .column.is-narrow.opening-times.content
+        %h6.title.is-6 Öffnungszeiten
+        %table
+          %tr
+            %td.day Montag
+            %td 7:30 - 18:30
+          %tr
+            %td.day Dienstag
+            %td 8:00 - 18:00
+          %tr
+            %td.day Mittwoch
+            %td 7:30 - 18:30
+          %tr
+            %td.day Donnerstag
+            %td 8:00 - 18:00
+          %tr
+            %td.day Freitag
+            %td 8:00 - 18:00
 
-    .col-md-4.links.pull-right
-      %ul.list-unstyled
-        %li= link_to "Kontakt", page_path("kontakt")
-        %li= link_to "Impressum", page_path("impressum")
-        %li= link_to "Datenschutz", page_path("datenschutz")
+      .column.content.links
+        .image= image_tag "hyrox.png"
+        %ul.list-unstyled
+          %li= link_to "Impressum", page_path("impressum")
+          %li= link_to "Datenschutz", page_path("datenschutz")

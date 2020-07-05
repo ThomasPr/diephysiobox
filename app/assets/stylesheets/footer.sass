@@ -1,0 +1,54 @@
+
+$footer-background-color: #333333
+$footer-color: white
+
+#footer
+  padding-bottom: 0
+
+  &, a, a:hover, th, td, h5, h6
+    color: white !important
+
+  .fas, .far
+    color: $primary
+
+  .content
+    padding-bottom: 1.5rem
+    margin-bottom: 0
+
+
+  .address
+    address
+      font-style: normal
+    p
+      margin-bottom: 0.5rem
+    .title
+      margin-bottom: 1rem
+
+
+  .opening-times
+    .title
+      margin-bottom: 0.5rem
+    .day
+        padding-right: 1rem
+    table
+      width: auto
+      td
+        border: 0
+        padding: 0.25rem 0 0 0
+
+
+  .links
+    @media (min-width: 768px)
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-end
+      text-align: right
+
+    .image
+      max-width: 250px
+
+    ul
+      list-style: none
+      margin: 0
+

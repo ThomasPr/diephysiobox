@@ -48,11 +48,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-gem 'jquery-rails', '~> 4.3'
-gem 'bootstrap', '~> 4.3'
 gem 'haml-rails', '~> 2.0'
 gem 'high_voltage', '~> 3.1'
-gem 'font-awesome-rails', '~> 4.7'
-gem 'bootstrap_form', '~> 4.2'
 gem 'rails-i18n', '~> 5.1'
 gem 'actionpack-page_caching', '~> 1.1'

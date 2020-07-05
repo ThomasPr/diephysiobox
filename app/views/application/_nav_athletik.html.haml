@@ -1,0 +1,22 @@
+%nav.subnav.container
+  .tabs.is-centered.is-toggle.is-toggle-rounded
+    %ul
+
+      %li{class: ('is-active' if request.fullpath.start_with?(page_path("athletik/leistungen")))}
+        = link_to "Leistungen", page_path("athletik/leistungen")
+
+      %li{class: ('is-active' if current_page?(page_path("athletik/kursangebot")))}
+        = link_to "Kursangebot", page_path("athletik/kursangebot")
+
+      %li{class: ('is-active' if current_page?(page_path("athletik/team")))}
+        = link_to "Team", page_path("athletik/team")
+
+      %li{class: ('is-active' if current_page?(page_path("athletik/kontakt")))}
+        = link_to "Kontakt", page_path("athletik/kontakt")
+
+  :javascript
+    window.addEventListener("DOMContentLoaded", () => {
+      const tabs = document.querySelector("nav.subnav .tabs")
+      const link = document.querySelector("nav.subnav li.is-active");
+      tabs.scrollLeft = (link.offsetLeft - tabs.offsetLeft) /2;
+    });
