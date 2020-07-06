@@ -46,8 +46,5 @@ module DiePhysioBox
 
     # No session, so don't bother with CSRF tokens
     config.action_controller.allow_forgery_protection = false
-
-    # Add app/assets/fonts to the asset pipeline
-    config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end
