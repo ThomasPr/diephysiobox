@@ -22,7 +22,7 @@
     .container
       .content
         .columns.is-mobile
-          .column.is-one-quarter.hide-xs= image_tag "quadrat/knie.jpg"
+          .column.is-one-quarter.hide-xs= render "picture", image: "quadrat/knie.jpg", sizes: [270, 222, 225, 162]
           .column
             = link_to page_path("physiotherapie"), class: "physio" do
               %h2 Physiotherapie
@@ -38,13 +38,13 @@
             = link_to page_path("athletik"), class: "athletik" do
               %h2 Functional Training
             %p Bei uns trainierst in einer Gruppe von 8-10 Personen. Persönliche Betreuung und Gruppendynamik sorgen für höchste Motivation und jede Menge Spaß.
-          .column.is-one-quarter.hide-xs= image_tag "quadrat/stange.jpg"
+          .column.is-one-quarter.hide-xs= render "picture", image: "quadrat/stange.jpg", sizes: [270, 222, 225, 162]
 
   %section.section.physio
     .container
       .content
         .columns.is-mobile
-          .column.is-one-quarter.hide-xs= image_tag "quadrat/schwanger.jpg"
+          .column.is-one-quarter.hide-xs= render "picture", image: "quadrat/schwanger.jpg", sizes: [270, 222, 225, 162]
           .column
             = link_to page_path("physiotherapie", anchor: "behandlung-von-schwangeren") do
               %h2 Behandlung von Schwangeren
@@ -60,13 +60,13 @@
             = link_to page_path("athletik", anchor: "personal-training") do
               %h2 Personal Training
             %p Nutzen Sie das Wissen der modernen Sportmedizin und lassen Sie sich von erfahrenen Trainern persönlich beraten und motivieren.
-          .column.is-one-quarter.hide-xs= image_tag "quadrat/kinesio.jpg"
+          .column.is-one-quarter.hide-xs= render "picture", image: "quadrat/kinesio.jpg", sizes: [270, 222, 225, 162]
 
   %section.section.physio
     .container
       .content
         .columns.is-mobile
-          .column.is-one-quarter.hide-xs= image_tag "quadrat/ruecken.jpg"
+          .column.is-one-quarter.hide-xs= render "picture", image: "quadrat/ruecken.jpg", sizes: [270, 222, 225, 162]
           .column
             = link_to page_path("physiotherapie", anchor: "osteopathisches-behandlungskonzept") do
               %h2 Osteopathische Behandlung
@@ -82,4 +82,4 @@
             = link_to page_path("athletik", anchor: "rehabilitation-und-sporttherapie") do
               %h2 Rehabilitation und Sporttherapie
             %p Wir erstellen differenzierte Therapie- und Trainingsplänen nach einer Verletzung oder einem Trauma unter Beachtung der verletzten Strukturen und ihrer Heilungsverläufe.
-          .column.is-one-quarter.hide-xs= image_tag "quadrat/sportphysio.jpg"
+          .column.is-one-quarter.hide-xs= render "picture", image: "quadrat/sportphysio.jpg", sizes: [270, 222, 225, 162]
