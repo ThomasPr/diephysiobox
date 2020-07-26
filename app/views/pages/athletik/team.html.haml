@@ -8,75 +8,122 @@
   %section.section
     .container
 
-      .columns.is-centered
-        .column.is-5.content
-          .mate
-            .has-text-centered
-              = image_tag "team/christoph.jpg"
-              %h3.name.title.is-4 Christoph Reiner
-              %h4.subtitle.is-6 Physiotherapeut
-            %p staatlich anerkannter Physiotherapeut
-            %ul
-              %li Manualtherapeut
-              %li Sportphysiotherapeut
-              %li Osteopathie
-              %li Kinesiotape
-              %li FMS-Certified
-              %li CF Level 1 Trainer
-              %li Ausbilder der Fitnesstrainer B-Lizenz der Internationalen Fitness & Aerobic Akademie (IFAA)
-            %p Herr Reiner betreute die U17 Bundesliga des TSV 1860 München und die U19 des FC Augsburg sowie Triathleten und Tennisspieler.
-
-        .column.is-5.content
-          .mate
-            .has-text-centered
-              = image_tag "team/aline.jpg"
-              %h3.name.title.is-4 Aline Vogt
-              %h4.subtitle.is-6 Physiotherapeutin
-            %p staatlich anerkannte Physiotherapeutin
-            %ul
-              %li Manualtherapeutin
-              %li Lymphtherapeutin
-              %li Sportphysiotherapeutin
-              %li Therapeutin für Med. Trainingstherapie
-              %li Kinesiotape
-              %li Osteopathie
-            %p Frau Vogt betreut als Physiotherapeutin die Bundesliga Hockeymannschaft des Münchner SC (MSC)
-
-
-  %section.section.content
-    .container
-      .columns
-
+      .columns.mb-6
+        .column.mate
+          = render "picture", image: "team/athletik/christoph.jpg", sizes: [326, 326, 326, 326]
         .column.content
-          .mate
-            .has-text-centered
-              = image_tag "team/lisa.jpg"
-              %h3.name.title.is-4 Lisa Rieß
-              %h4.subtitle.is-6 Physiotherapeutin
-            %p staatlich anerkannte Physiotherapeutin
-            %ul
-              %li Osteopathie i.A.
-              %li Lymphtherapeutin
-              %li Manualtherapeutin
-              %li CF Level 1 Trainer
-            %p &nbsp;
+          %h2.title Christoph
+          %p Inhaber der Physio Box München
 
+          %p.mb-1
+            Physiotherapeut und Osteopathie, mit Abschluss nach BAO und FMS Certified (Functional Movement Screen)
+          %ul.mt-0
+            %li 2010&nbsp;-&nbsp;2014 war Christoph Physiotherapeut für das JLZ&nbsp;1860&nbsp;München und den FC&nbsp;Augsburg
+            %li 2010&nbsp;-&nbsp;2015 Ausbilder für die Fitness Trainer B-Lizenz bei der IFAA
+          %p Er selbst hat 17 Jahre Handball gespielt und macht Crossfit seit 2012, CF Level 1 Trainer.
+
+          %p.mb-1
+            Zu Seinen größten Herausforderungen gehören:
+          %ul.mt-0
+            %li Tyrolian Mountain Throwdown 2015
+            %li Arthen Thorwdown 2016
+            %li Cypress Throwdown 2016
+            %li Munich Clash 2016
+            %li Italien Throwdown 2017
+            %li Austrian Champions Day 2017
+
+          %p Lieblingsübung: Muscle Up
+          %p Best Skill: "Der hört wenn ihr 'ne Übung falsch macht!"
+
+
+      .columns.mb-6
+        .column.mate
+          = render "picture", image: "team/athletik/lisa.jpg", sizes: [326, 326, 326, 326]
         .column.content
-          .mate
-            .has-text-centered
-              = image_tag "team/katja.jpg"
-              %h3.name.title.is-4 Katja Zimmermann
-              %h4.subtitle.is-6 Physiotherapeutin
-            %p Master of Science Sportphysiotherapie i.A.
-            %ul
-              %li Manualtherapeutin
-              %li Kinesiotape
-              %li Therapeutin für Med. Trainingstherapie
-              %li CF Level 1 Trainer
+          %h2.title Lisa
+          %p
+            %div Lisa kommt ursprünglich aus der Hauptstadt Berlin und lebt seit 2013 in München.
+            %div.mt-1 Ihre ersten Crossfit Erfahrungen hat sie Anfang 2014 in der Bundeswehr Crossfit Box Kokoro gemacht und wusste: "So fit will ich auch mal werden!".
+            %div.mt-1 2015 folgte der CF Level 1 Trainer.
 
-        .column
-          .mate
-            .has-text-centered
-              = image_tag "team/anette.jpg"
-              %h3.name.title.is-4 Anette Nowag
-              %h4.subtitle.is-6 Rezeption und Verwaltung
+          %p.mb-1
+            Zu Ihren größten Herausforderungen gehören:
+          %ul.mt-0
+            %li Austrian Champions Day 2015
+            %li Berlin Throwdown 2016
+            %li Munich Clash 2016
+            %li Austrian Champions Day 2016
+            %li Are you tough enough 2016
+            %li Italien Throwdown 2017
+            %li Berlin Throwdown 2017
+            %li The Alpha Games 2017
+            %li Berlin Throwdown 2018
+
+          %p
+            %div 2017/2018 wurde sie Deutsche Meisterin im Gewichtheben in der -69&nbsp;kg Gewichtsklasse.
+            %div.mt-1 Lisa coacht leidenschaftlich gerne und hat große Freude daran, das funktionelle Training weiterzuvermitteln.
+
+          %p Liebligsübung: Snatch
+          %p Best Skill: In Lisas Stunden gibt es immer viel zu Lachen, vor allem aber mit ihr!
+
+
+      .columns.mb-6
+        .column.mate
+          = render "picture", image: "team/athletik/katja.jpg", sizes: [326, 326, 326, 326]
+        .column.content
+          %h2.title Katja
+          %p Katja kommt aus einem kleinen Städtchen zwischen Eifel und Rheinland und ist für die Physiotherapie nach München gezogen. Durch ihre Brüder hat sie die Begeisterung für den Triathlon endeckt, und weil 3 Sportarten nicht genug waren, kam 2014 dann noch Crossfit dazu. Seit 2016 coacht Katja nun mit ihrer Expertise aus dem Master in Sportphysiotherapie und Crossfit Level 1 mit Leidenschaft Functional Fitness Klassen und Trainingscamps.
+
+          %p.mb-1
+            Zu Ihren größten Herausforderungen gehören:
+          %ul.mt-0
+            %li Vereinsmeisterin (scaled), Crossfit Munich 2016
+            %li Triathlon 2019
+            %li Langstreckenschwimmen Tegernsee 2019
+
+          %p Lieblingsübung: Squat Clean
+          %p Skill: Quält dich schon im Warm Up mit intensiven Schulterübungen!
+
+
+      .columns.mb-6
+        .column.mate
+          = render "picture", image: "team/athletik/laura.jpg", sizes: [326, 326, 326, 326]
+        .column.content
+          %h2.title Laura
+          %p
+            %div Ursprünglich kommt diese Frohnatur aus dem schönen Allgäu, lebt allerdings zu unserer Bereicherung nun schon 20 Jahre in München.
+            %div.mt-1 Nach vielen Jahren Freizeitsport hat sie sich nachhaltig für das funktionelle Fitnesstraining und Crossfit begeistert (Fitnesstrainer C-Lizenz) und trainert seit 2015 in der Physio Box.
+          %p Laura liebt das vielfältige Training in kleinen Gruppen mit hoher Motivation und großem Spaß.
+          %p Lieblingsübung: Clean
+          %p Best Skill: Laura kommt erst so richtig in Fahrt, wenn du leidest!
+
+
+      .columns.mb-6
+        .column.mate
+          = render "picture", image: "team/athletik/julia.jpg", sizes: [326, 326, 326, 326]
+        .column.content
+          %h2.title Julia
+          %p Nach vielen Jahren Vereinssport ist Julia eines Tages zum Probetraining in die Physio Box gekommen und dann zu unserer aller Bereicherung gleich geblieben. Seit nun 5 Jahren ist sie aktives Mitglied der Physio Box mit Crossfit Level 1 Lizenz. Fitnessstudios und alleine trainieren ist nichts für sie - sie liebt es, das Team anzufeuern und zu motivieren.
+          %p Lieblingsübung: Dumbbell Snatches
+          %p Skill: Wenn du am Boden liegst vor Erschöpfung, dann bleibt sie bei dir und feuert dich an bis Du dein Workout zu Ende gebracht hast!
+
+
+      .columns.mb-6
+        .column.mate
+          = render "picture", image: "team/athletik/fj.jpg", sizes: [326, 326, 326, 326]
+        .column.content
+          %h2.title FJ
+          %p
+            %div Unbedarft ist er 2014 in eine Crossfit Box in Edinburgh marschiert und wurde von dem Teamgeist, sowie dem Konzept und der Intensität des Funcional Fitness infiziert.
+            %div.mt-1 2016 folgte die Crossfit Level 1 Lizenz und seit 2017 ist FJ als Athlet in der Physio Box aktiv.
+          %p Lieblingsübung: Double Unders & Bench Press
+          %p Skill: Ruhepol, der im richtigen Moment zur Stelle ist!
+
+      .columns.mb-6
+        .column.mate
+          = render "picture", image: "team/athletik/daniel.jpg", sizes: [326, 326, 326, 326]
+        .column.content
+          %h2.title Daniel
+          %p Seit 2012 begeisterter Crossfit-Jünger und seit 2017 Teil des Physio Box Teams. Er liebt es die Athleten in den Kursen zu quälen und ist seiner veganen Ernährung mit dem gelegentichen Cheeseburger auch sehr treu.
+          %p Lieblingsübung: schwere Hanteln rumschmeißen
+          %p Skill: Der meist mehr oder weniger hilfreiche Tipp :)
