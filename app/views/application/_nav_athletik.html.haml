@@ -5,11 +5,11 @@
       %li{class: ('is-active' if request.fullpath.start_with?(page_path("athletik/leistungen")))}
         = link_to "Leistungen", page_path("athletik/leistungen")
 
-      %li{class: ('is-active' if request.fullpath.start_with?(page_path("athletik/preise")))}
-        = link_to "Preise", page_path("athletik/preise")
-
       %li{class: ('is-active' if current_page?(page_path("athletik/kursangebot")))}
         = link_to "Kursangebot", page_path("athletik/kursangebot")
+
+      %li{class: ('is-active' if request.fullpath.start_with?(page_path("athletik/preise")))}
+        = link_to "Preise", page_path("athletik/preise")
 
       %li{class: ('is-active' if current_page?(page_path("athletik/team")))}
         = link_to "Team", page_path("athletik/team")
