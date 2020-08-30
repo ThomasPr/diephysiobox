@@ -1,4 +1,9 @@
-#athletik-laktatdiagnostik
+- content_for(:title, "Präventive Vorsorge im Freizeit– und Amateursport")
+-# content_for(:description, "Nutzen Sie das Wissen der modernen Sportmedizin und lassen Sie sich von erfahrenen Trainiern persönlich beraten und motivieren.")
+-# content_for(:keywords, "Sport, Reha, Rehabilitation, Sporttherapie, Personal Training, Kinesiotaping, Athletik")
+
+
+#athletik-leistungen-praeventive-vorsorge
 
 %section.page-header
   .container
@@ -15,7 +20,8 @@
           %p Heutzutage weiß man aber, dass im Sport Vorsorge getroffen werden sollte, „bevor“ es zu Verletzungen kommt. Es spielt dabei keine Rolle, um welchen Sport es sich handelt, egal ob CrossFit, Fußball, Handball, Hockey, Triathlon oder eine andere Sportart. Doch leider werden therapeutische Maßnahmen für den Sportler erst wichtig und interessant, wenn es schon zu Verletzungen gekommen ist. Dann ist der Zug bereits abgefahren und man verliert wertvolle Zeit, um den sportlichen Zielen näher zu kommen. Prävention im Amateursport ist leider noch wenig verbreitet. Der Glaube, nur der Profisportler könne sich einen fachmännischen Rat einholen ist veraltet und entspricht nicht mehr der Realität.
           %p Täglich erleben wir hier bei der Physiobox, dass Sportler aus den unterschiedlichsten Sportarten auf Anweisung eines Arztes in unsere Praxis zur Behandlung kommen. Es zeigen sich viele Beschwerdebilder, wie Probleme in der Wirbelsäule, im Kniegelenk, der Schulter, im Sprunggelenk und vieles mehr.  Oftmals wird uns dann die Frage gestellt, wie lange denn die Verletzung dauern werde und warum Profisportler schneller regenerieren oder gar nicht erst derartige Verletzungen bekommen.
           %p Hier muss ganz klar differenziert werden. Ein Profisportler wird in der Regel von Physiotherapeuten, Ärzten und Sportwissenschaftlern regelmäßig durch verschiedene Screening Verfahren untersucht. Dadurch können bereits frühzeitig mögliche Überlastungen erkannt und ausgeschaltet werden.
-          = image_tag image_url("vorsorge/umknicken.jpg"), alt: "Belastung des Sprunggelenks beim Umknicken", class: "float-right"
+          %p= render "picture", image: "vorsorge/umknicken.jpg", sizes: [222, 168, 270, 320], alt: "Belastung des Sprunggelenks beim Umknicken", class: "float-right"
+
           %p
             Wie sind diese präventive Ansätze zu verstehen?
             %br
@@ -26,7 +32,7 @@
             Sicherlich wirst Du jetzt antworten: „Ja klar, aber das ist doch schon Jahre her und das ist doch jedem schon mal passiert.“
             %br
             Und hier liegt eine mögliche Ursache eines Bandscheibenvorfalls, einer Muskelzerrung oder einer Entzündung am Kniegelenk.
-          = image_tag image_url("vorsorge/anatomie_sprunggelenk.jpg"), alt: "Anatomie des Sprunggelenks", class: "float-left"
+          = render "picture", image: "vorsorge/anatomie_sprunggelenk.jpg", sizes: [222, 168, 270, 320], alt: "Anatomie des Sprunggelenks", class: "float-left"
           %p
             Warum?
             %br
@@ -39,7 +45,7 @@
             Diese Verkettungen lassen sich oftmals im Vorfeld vermeiden, wenn der Athlet oder Hobbysportler direkt nach seinem Trauma oder präventiv versorgt wird.
             %br
             Es ließen sich viele weitere Beispiele anführen. Dies würde jedoch einen tieferen Einstieg in die Anatomie erfordern und den Rahmen dieses Artikels sprengen.
-          = image_tag image_url("vorsorge/bewegungsapparat.png"), alt: "Bewegungsapparat", class: "float-right"
+          = render "picture", image: "vorsorge/bewegungsapparat.png", sizes: [222, 168, 270, 320], alt: "Bewegungsapparat", class: "float-right"
           %p
             Viele Hobby– und Amateursportler haben über Jahre hinweg unterschiedliche Dysfunktionen im Bewegungsapparat aufgebaut, sei es ein zurückliegendes Trauma, eine Operationsnarbe oder eine monotone Haltung über einen längeren Zeitraum. Der Körper kann durch andere Strukturen ausgleichen und kompensieren. Aber auch diese Strukturen sind irgendwann überlastet sind werden diese Zusatzfunktion nicht mehr erfüllen können. Leider wird nach wie vor die Meinung vertreten: „Naja, Sport tut weh oder muss weh tun“.
             %br

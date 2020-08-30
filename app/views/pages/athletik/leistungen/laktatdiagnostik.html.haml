@@ -1,4 +1,9 @@
-#athletik-laktatdiagnostik
+- content_for(:title, "Laktatdiagnostik")
+-# content_for(:description, "Nutzen Sie das Wissen der modernen Sportmedizin und lassen Sie sich von erfahrenen Trainiern persönlich beraten und motivieren.")
+-# content_for(:keywords, "Sport, Reha, Rehabilitation, Sporttherapie, Personal Training, Kinesiotaping, Athletik")
+
+
+#athletik-leistungen-laktatdiagnostik
 
 %section.page-header
   .container
@@ -12,7 +17,7 @@
       .column.content.columnize
         %h2 Was ist Laktat?
         %p Laktat ist ein Stoffwechselprodukt, das im Zuge des anaeroben Kohlenhydratstoffwechsel, also der Gewinnung von Energie aus Zucker ohne die Nutzung von Sauerstoff, entsteht.
-        %p= image_tag image_url("laktatdiagnostik/laktat1.jpg"), alt: "Laktatmessung"
+        %p= render "picture", image: "laktatdiagnostik/laktat1.jpg", sizes: [443, 367, 670, 670], alt: "Laktatmessung"
 
         %h2 Was erwartet euch bei einer Laktatdiagnostik?
         %p Eine Laktatdiagnostik wird auf einem Ergometer, beispielsweise einem Laufband- oder einem Fahrradergometer durchgeführt. Dies hängt davon ab, für welche Bewegungsform eure Ergebnisse gelten sollen. Seid ihr beispielsweise Läufer, werdet ihr natürlich auf dem Laufband belastet.
@@ -26,4 +31,4 @@
         %p Auf dieser Basis lassen sich in Bezug auf die Laktatdiagnostik mehrere Schlüsse ziehen:
         %p Je höher die Belastungsintensität ist, an welcher der Laktatwert anzusteigen beginnt, desto höher ist die aerobe Kapazität, da der Körper mehr Energie pro Zeiteinheit auf aerobem Wege bereitstellen kann
         %p Mit der Kenntnis, in welchen Belastungszonen bereits vermehrt anaerober Stoffwechsel stattfindet und in welchen noch nicht, lassen sich individuelle Trainingsempfehlungen erstellen, um beispielsweise die aerobe Kapazität zu erhöhen.
-        %p= image_tag image_url("laktatdiagnostik/laktat2.jpg"), alt: "Besprechen der Ergebnisse"
+        %p= render "picture", image: "laktatdiagnostik/laktat2.jpg", sizes: [443, 367, 670, 670], alt: "Besprechen der Ergebnisse"
