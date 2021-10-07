@@ -1,0 +1,89 @@
+- content_for(:title, "Leistungen • Physiotherapie")
+-# content_for(:description, "Nutzen Sie das Wissen der modernen Sportmedizin und lassen Sie sich von erfahrenen Trainiern persönlich beraten und motivieren.")
+-# content_for(:keywords, "Sport, Reha, Rehabilitation, Sporttherapie, Personal Training, Kinesiotaping, Athletik")
+
+
+#leistungen
+
+  %section.page-header
+    .container
+      %h1.title.is-1 Leistungen
+
+
+  %section.section.leistungen
+    .container
+      .columns.is-multiline.is-centered
+
+        .column.is-half-tablet.is-one-third-desktop
+          .card
+            .card-image
+              %figure.image
+                = render "picture", image: "leistungen/physio/manuelle-therapie.jpg", sizes: [366, 302, 474, 718], alt: "Manuelle Therapie"
+            .card-content
+              .media
+                .media-content
+                  %h2.title.is-4 Manuelle Therapie
+              .content
+                %p Bei der manuellen Therapie werden Funktionsstörungen des Bewegungsapparates untersucht und behandelt. Dabei kommen spezielle Handgriff- und Mobilisationstechniken zum Einsatz. Die manuelle Therapie beinhaltet sowohl passive Techniken als auch aktive Übungen um Gelenke zu mobilisieren und anschließend mit Übungen zu stabilisieren.
+
+
+        .column.is-half-tablet.is-one-third-desktop
+          .card
+            .card-image
+              %figure.image
+                = render "picture", image: "leistungen/physio/krankengymnastik.jpg", sizes: [366, 302, 474, 718], alt: "Krankengymnastik"
+            .card-content
+              .media
+                .media-content
+                  %h2.title.is-4 Krankengymnastik
+              .content
+                %p Die Krankengymnastik umfasst sowohl aktive als auch passive Therapieformen. Das Behandlungsziel ist es die Bewegungs- und Funktionsfähigkeit des Körpers zu verbessern. Damit können Krankheiten aus fast allen medizinischen Fachbereichen therapiert werden.
+
+        .column.is-half-tablet.is-one-third-desktop
+          .card
+            .card-image
+              %figure.image
+                = render "picture", image: "leistungen/physio/osteopathie.jpg", sizes: [366, 302, 474, 718], alt: "Osteopathische Behandlung"
+            .card-content
+              .media
+                .media-content
+                  %h2.title.is-4 Osteopathische Behandlung
+              .content
+                %p Osteopathie ist eine Form der manuellen Therapie zur Untersuchung und Behandlung des Bewegungsapparates, der Organe und ihrer Aufhängungen. Außerdem wird das kraniosakrale System, bestehend aus zentralem Nervensystem über Schädel und seine Verbindung zum Kreuzbein über die Wirbelsäule und das Rückenmark, miteinbezogen.
+
+        .column.is-half-tablet.is-one-third-desktop
+          .card
+            .card-image
+              %figure.image
+                = render "picture", image: "leistungen/physio/cmd.jpg", sizes: [366, 302, 474, 718], alt: "Behandlung bei craniomandibulärer Dysfunktion (CMD)"
+            .card-content
+              .media
+                .media-content
+                  %h2.title.is-4 Behandlung bei craniomandibulärer Dysfunktion (CMD)
+              .content
+                %p Funktionsstörungen, die durch Fehlstellungen zwischen Halswirbelsäule, Schädel und Unterkiefer entstehen, können die Kaufunktion beeinträchtigen. Symptome sind z. B. Kieferschmerzen, Kopfschmerzen, Ohrgeräusche sowie Zähneknirschen. Durch gezielte Therapie können diese Fehlstellungen korrigiert werden. Zahnärzte haben die Möglichkeit diese Behandlungen zu verschreiben.
+
+        .column.is-half-tablet.is-one-third-desktop
+          .card
+            .card-image
+              %figure.image
+                = render "picture", image: "leistungen/physio/lymphdrainage.jpg", sizes: [366, 302, 474, 718], alt: "Manuelle Lymphdrainage"
+            .card-content
+              .media
+                .media-content
+                  %h2.title.is-4 Manuelle Lymphdrainage
+              .content
+                %p Die manuelle Lymphdrainage dient der Entstauung von geschwollenem Gewebe. Dabei werden spezielle Handgriffe verwendet, welche die angestaute Flüssigkeit in Richtung der zuständigen Lymphknotenstation abtransportieren. Das Gewebe schwillt ab, die Schmerzen werden gelindert und die Strukturen werden lockerer und weicher, was sich positiv auf die Beweglichkeit auswirkt.
+
+        .column.is-half-tablet.is-one-third-desktop
+          .card
+            .card-image
+              %figure.image
+                = render "picture", image: "leistungen/physio/massage.jpg", sizes: [366, 302, 474, 718], alt: "Klassische Massage"
+            .card-content
+              .media
+                .media-content
+                  %h2.title.is-4 Klassische Massage
+              .content
+                %p Massagegrundgriffe wie Streichungen, Klopfungen und Vibrationen entspannen die Muskulatur, lindern Schmerzen, verbessern die Durchblutung und regen den Stoffwechsel an.
+

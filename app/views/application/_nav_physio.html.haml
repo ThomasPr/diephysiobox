@@ -1,12 +1,12 @@
 %nav.subnav.container
-  .tabs.is-centered.is-toggle.is-toggle-rounded
+  .tabs.is-centered.is-toggle
     %ul
 
-      %li{class: ('is-active' if current_page?(page_path("physio/leistungen")))}
-        = link_to "Leistungen", page_path("physio/leistungen")
+      %li{class: ('is-active' if current_page?(page_path("physiotherapie/leistungen")))}
+        = link_to "Leistungen", page_path("physiotherapie/leistungen")
 
-      %li{class: ('is-active' if current_page?(page_path("physio/team")))}
-        = link_to "Team", page_path("physio/team")
+      %li{class: ('is-active' if current_page?(page_path("physiotherapie/team")))}
+        = link_to "Team", page_path("physiotherapie/team")
 
-      %li{class: ('is-active' if current_page?(page_path("physio/kontakt")))}
-        = link_to "Kontakt", page_path("physio/kontakt")
+      %li{class: ('is-active' if current_page?(page_path("physiotherapie/kontakt")))}
+        = link_to "Kontakt", page_path("physiotherapie/kontakt")

@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :define_type
 
   def define_type
-    @type = request.fullpath.start_with?("/physio") ? "physio" : request.fullpath.start_with?("/athletik") ? "athletik" : "home"
-    @logo = request.fullpath.start_with?("/athletik") ? "athletik" : "physio"
+    @type = request.fullpath.start_with?("/physio") ? "physio" : request.fullpath.start_with?("/funktionelles-training") ? "athletik" : "home"
+    @logo = request.fullpath.start_with?("/funktionelles-training") ? "logo-mensch.svg" : "logo-box.svg"
   end
 end

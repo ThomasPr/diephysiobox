@@ -6,13 +6,19 @@
       .level-left
         .level-item
           = link_to root_path do
-            = image_tag "#{@logo}.png", class: "brand"
+            = image_tag @logo, class: "brand"
       .level-right
-        .level-item
-          - physio_active = "selected" if request.fullpath.start_with?(page_path("physio"))
-          = link_to "Physio", page_path("physio"), class: "button is-rounded physio #{physio_active}"
-        .level-item
-          - athletik_active = "selected" if request.fullpath.start_with?(page_path("athletik"))
-          = link_to "Athletik", page_path("athletik"), class: "button is-rounded athletik #{athletik_active}"
+
+        %nav.main-nav
+          .tabs.is-toggle.is-right
+            %ul
+              - physio_active = "is-active" if request.fullpath.start_with?(page_path("physiotherapie"))
+              %li{class: "#{physio_active}"}
+                = link_to "Physiotherapie", page_path("physiotherapie"), class: "physio"
+
+              - athletik_active = "is-active" if request.fullpath.start_with?(page_path("funktionelles-training"))
+              %li{class: "#{athletik_active}"}
+                = link_to "Funktionelles Training", page_path("funktionelles-training"), class: "athletik"
+
 
   = render "nav_#{@type}" unless content_for?(:skip_nav)

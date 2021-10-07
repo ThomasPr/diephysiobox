@@ -3,25 +3,28 @@
   %head
     %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %meta{name: "viewport", content: "width=device-width, initial-scale=1, shrink-to-fit=no"}/
+
     %title= content_for?(:title) ? "#{content_for(:title)} • Die Physiobox" : "Die Physiobox"
     %link{rel: "canonical", href: url_for(only_path: false)}
-    %meta{name: "robots", content: content_for(:robots) }
     %meta{name: "description", content: content_for(:description) }
     %meta{name: "keywords", content: content_for(:keywords) }
+    %meta{name: "robots", content: content_for(:robots) }
+
+    %meta{property: "og:type", content: "website"}
     %meta{property: "og:url", content: url_for(only_path: false)}
     %meta{property: "og:title", content: content_for?(:title) ? "#{content_for(:title)} • Die Physiobox" : "Die Physiobox"}
     %meta{property: "og:description", content: content_for(:description) }
     %meta{property: "og:image", content: image_url("diephysiobox.png?width=300")}
+
     = javascript_include_tag 'application'
-    = favicon_link_tag "/favicon.ico"
     %script{type: "application/ld+json"}= content_for?(:schema) ? render("schemas/" + content_for(:schema)) : ""
 
-    - style = request.fullpath.start_with?("/physio") ? "physio" : request.fullpath.start_with?("/athletik") ? "athletik" : "home"
+    - style = request.fullpath.start_with?("/physio") ? "physio" : request.fullpath.start_with?("/funktionelles-training") ? "athletik" : "home"
     = stylesheet_link_tag style, media: 'all'
 
-    - [16, 32, 48, 57, 76, 96, 120, 128, 152, 167, 180, 192, 512].each do |size|
-      %link{rel: "apple-touch-icon", sizes: "#{size}x#{size}", href: image_url("diephysiobox.png?width=#{size}")}
-      %link{rel: "icon", sizes: "#{size}x#{size}", href: image_url("diephysiobox.png?width=#{size}")}
+    %link{rel: "icon",  href: image_url("logo-mensch.svg")}
+    %link{rel: "mask-icon", href: image_url("logo-mensch.svg"), color: "#FFFFFF"}
+    %link{rel: "apple-touch-icon", href: image_url("diephysiobox.png?width=180")}
 
   %body
     = render "header"
