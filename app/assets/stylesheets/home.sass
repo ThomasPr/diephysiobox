@@ -27,8 +27,13 @@ $secondary: $athletik
       color: $athletik !important
       text-decoration-color: $athletik
 
-  section.physio h2, section.athletik h2
+
+  section.physio h2 .wbr, section.athletik h2 .wbr
+    word-wrap: break-word
     overflow-wrap: break-word
+    -webkit-hyphens: auto
+    -ms-hyphens: auto
+    -moz-hyphens: auto
     hyphens: auto
 
   section.physio
