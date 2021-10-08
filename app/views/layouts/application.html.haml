@@ -15,6 +15,7 @@
     %meta{property: "og:title", content: content_for?(:title) ? "#{content_for(:title)} • Die Physiobox" : "Die Physiobox"}
     %meta{property: "og:description", content: content_for(:description) }
     %meta{property: "og:image", content: image_url("og-image.png")}
+    %meta{property: "twitter:card", content: "summary_large_image"}
 
     = javascript_include_tag 'application'
     %script{type: "application/ld+json"}= content_for?(:schema) ? render("schemas/" + content_for(:schema)) : ""
