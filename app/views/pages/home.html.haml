@@ -1,5 +1,5 @@
 - content_for :title, "Physiotherapie und Funktionelles Training"
-- content_for :description, "Ihre Praxis für ganzheitliche Physiotherapie, Osteopathie und funktionellem Training im Münchener Westend"
+- content_for :description, "Ihre Praxis für ganzheitliche Physiotherapie, osteopathische Behandlungskonzepte und funktionellem Training im Münchener Westend"
 - content_for :schema, "localbusiness.json"
 
 #home
@@ -8,14 +8,14 @@
     .hero-body
       .container
         %h1.title.is-1.is-uppercase Die Physiobox
-        %h2.subtitle.is-3 Ihre Praxis für ganzheitliche Physiotherapie, Osteopathie und funktionellem Training im Münchener Westend
+        %h2.subtitle.is-3 Ihre Praxis für ganzheitliche Physiotherapie, osteopathische Behandlungskonzepte und funktionellem Training im Münchener Westend
 
 
   %section.section.teaser
     .container
       .content.is-medium
         Unser Angebot für Sie basiert auf zwei Säulen:
-        = link_to "Physiotherapie/Osteopathie", page_path("physiotherapie"), class: "physio"
+        = link_to "Physiotherapie/osteopathische Behandlungskonzepte", page_path("physiotherapie"), class: "physio"
         und
         = succeed "." do
           = link_to "funktionellem Training", page_path("funktionelles-training"), class: "athletik"
@@ -75,10 +75,10 @@
     .container
       .content
         .columns.is-mobile
-          .column.is-one-quarter.hide-xs= render "picture", image: "leistungen/physio/osteopathie.jpg", sizes: [270, 222, 225, 162], alt: "Osteopathische Behandlung"
+          .column.is-one-quarter.hide-xs= render "picture", image: "leistungen/physio/osteopathie.jpg", sizes: [270, 222, 225, 162], alt: "osteopathische Behandlungskonzepte"
           .column
             = link_to page_path("physiotherapie/leistungen") do
-              %h2 Osteopathische Behandlung
+              %h2 Osteopathische Behandlungskonzepte
             %p
               Mit Hilfe von osteopathischen Techniken analysieren wir die Ursachen von Funktionsstörungen.
               %br/
