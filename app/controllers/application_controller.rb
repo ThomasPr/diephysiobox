@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
 
   def define_type
     @type = request.fullpath.start_with?("/physio") ? "physio" : request.fullpath.start_with?("/funktionelles-training") ? "athletik" : "home"
-    @logo = request.fullpath.start_with?("/funktionelles-training") ? "logo-box.svg" : "logo-mensch.svg"
+    @logo = request.fullpath.start_with?("/funktionelles-training") ? "logo-mensch.svg" : "logo-box.svg"
   end
 end
