@@ -1,0 +1,32 @@
+<header>
+  <div class="top-bar"></div>
+  <div class="container">
+    <nav class="level is-mobile">
+      <div class="level-left">
+        <div class="level-item">
+          <a href="{{ site.baseurl | append: '/' }}">
+            <img src="{{ '/assets/images/' | append: layout.logo | relative_url }}" alt="Die Physiobox Logo" class="brand">
+          </a>
+        </div>
+      </div>
+
+      <div class="level-right">
+        <nav class="main-nav">
+          <div class="tabs is-toggle is-right">
+            <ul>
+              <li class="{% if layout.style == 'physio' %}is-active{% endif %}">
+                <a href="{{ '/physiotherapie' | relative_url }}" class="physio">Physiotherapie</a>
+              </li>
+              <li class="{% if layout.style == 'athletik' %}is-active{% endif %}">
+                <a href="{{ '/funktionelles-training' | relative_url }}" class="athletik">Funktionelles Training</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </nav>
+  </div>
+
+  {% include nav_{{ layout.style }}.html %}
+
+</header>

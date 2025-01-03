@@ -1,0 +1,31 @@
+<nav class="subnav container">
+  <div class="tabs is-centered is-toggle">
+    <ul>
+      <li class="{% if page.url == '/funktionelles-training/leistungen.html' %}is-active{% endif %}">
+        <a href="{{ '/funktionelles-training/leistungen' | relative_url }}">Leistungen</a>
+      </li>
+      <li class="{% if page.url == '/funktionelles-training/kursangebot.html' %}is-active{% endif %}">
+        <a href="{{ '/funktionelles-training/kursangebot' | relative_url }}">Kursangebot</a>
+      </li>
+      <li class="{% if page.url == '/funktionelles-training/preise.html' %}is-active{% endif %}">
+        <a href="{{ '/funktionelles-training/preise' | relative_url }}">Preise</a>
+      </li>
+      <li class="{% if page.url == '/funktionelles-training/team.html' %}is-active{% endif %}">
+        <a href="{{ '/funktionelles-training/team' | relative_url }}">Team</a>
+      </li>
+      <li class="{% if page.url == '/funktionelles-training/kontakt.html' %}is-active{% endif %}">
+        <a href="{{ '/funktionelles-training/kontakt' | relative_url }}">Kontakt</a>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const tabs = document.querySelector("nav.subnav .tabs");
+      const link = document.querySelector("nav.subnav li.is-active");
+      if (link) {
+        tabs.scrollLeft = (link.offsetLeft - tabs.offsetLeft) / 2;
+      }
+    });
+  </script>
+</nav>

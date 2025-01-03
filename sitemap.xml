@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://diephysiobox.de</loc>
+  </url>
+  <url>
+    <loc>https://diephysiobox.de/funktionelles-training/</loc>
+  </url>
+  <url>
+    <loc>https://diephysiobox.de/funktionelles-training/kontakt</loc>
+  </url>
+  <url>
+    <loc>https://diephysiobox.de/funktionelles-training/kursangebot</loc>
+  </url>
+  <url>
+    <loc>https://diephysiobox.de/funktionelles-training/leistungen</loc>
+  </url>
+  <url>
+    <loc>https://diephysiobox.de/funktionelles-training/preise</loc>
+  </url>
+  <url>
+    <loc>https://diephysiobox.de/funktionelles-training/team</loc>
+  </url>
+  <url>
+    <loc>https://diephysiobox.de/physiotherapie/</loc>
+  </url>
+  <url>
+    <loc>https://diephysiobox.de/physiotherapie/kontakt</loc>
+  </url>
+  <url>
+    <loc>https://diephysiobox.de/physiotherapie/leistungen</loc>
+  </url>
+  <url>
+    <loc>https://diephysiobox.de/physiotherapie/team</loc>
+  </url>
+</urlset>

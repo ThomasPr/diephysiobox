@@ -1,0 +1,15 @@
+<nav class="subnav container">
+  <div class="tabs is-centered is-toggle">
+    <ul>
+      <li class="{% if page.url == '/physiotherapie/leistungen.html' %}is-active{% endif %}">
+        <a href="{{ '/physiotherapie/leistungen' | relative_url }}">Leistungen</a>
+      </li>
+      <li class="{% if page.url == '/physiotherapie/team.html' %}is-active{% endif %}">
+        <a href="{{ '/physiotherapie/team' | relative_url }}">Team</a>
+      </li>
+      <li class="{% if page.url == '/physiotherapie/kontakt.html' %}is-active{% endif %}">
+        <a href="{{ '/physiotherapie/kontakt' | relative_url }}">Kontakt</a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,55 @@
+{
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "{{ site.url }}/",
+  "name": "Die Physiobox",
+  "url": "{{ site.url }}",
+  "telephone": "+49 89 95493710",
+  "faxNumber": "+49 89 95493619",
+  "email": "mail@diephysiobox.de",
+  "image": "{{ site.url }}/assets/images/logo-box-white.svg",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Westendstraße 185",
+    "addressLocality": "München",
+    "postalCode": "80686",
+    "addressCountry": "DE"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.1341664,
+    "longitude": 11.5237345
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "8:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Tuesday",
+      "opens": "8:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Thursday",
+      "opens": "8:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "08:00",
+      "closes": "18:00"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+---
+layout: physio
+title: "Kontakt • Physiotherapie"
+description: "Nehmen Sie direkt Kontakt mit uns auf. Wir melden uns umgehend bei Ihnen."
+keywords: "Kontakt, E-Mail, Telefon"
+---
+
+<div id="kontakt">
+  <section class="page-header">
+    <div class="container">
+      <h1 class="title is-1">Kontakt</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+
+        <div class="column map" id="mapContainer">
+          <img id="map">
+        </div>
+
+        <div class="column contact">
+          <div class="title is-3 has-text-primary">Die Physiobox</div>
+          <p>
+            <span class="icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+            Westendstraße 185<br>
+            <span class="icon">
+              <i class="fas fa-invalid"></i>
+            </span>
+            80686 München
+          </p>
+          <p>
+            <span class="icon">
+              <i class="fas fa-phone"></i>
+            </span>
+            <a href="tel:+498995493710">(089) 95 49 37 10</a>
+          </p>
+          <p>
+            <span class="icon">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <a href="mailto:mail@diephysiobox.de">mail@diephysiobox.de</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  const updateMap = () => {
+    const mapWidth = document.getElementById("mapContainer").clientWidth;
+    // const mapHeight = document.getElementById("mapContainer").clientHeight;
+    const mapHeight = Math.round(mapWidth / 1.618);
+
+    document.getElementById("map").src =
+      "https://maps.googleapis.com/maps/api/staticmap" +
+      "?center=48.134,11.523592" +
+      "&markers=color:0x3CB451%7C48.134,11.523592" +
+      "&zoom=13" +
+      `&size=${mapWidth}x${mapHeight}` +
+      "&scale=" + (window.devicePixelRatio || 1) +
+      "&key=AIzaSyBC7IgkmHJLl7C42c1_KWBHBYouPXLNBxs";
+  };
+
+  window.addEventListener("DOMContentLoaded", updateMap);
+  window.addEventListener("resize", updateMap);
+</script>

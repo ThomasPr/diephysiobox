@@ -1,0 +1,62 @@
+---
+layout: nil
+style: home
+logo: logo-box.svg
+---
+
+{% assign title = 'Die Physiobox' %}
+{% if page.title %}
+  {% assign physio_active = page.title | append: ' • Die Physiobox' %}
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>{{ title }}</title>
+    <link rel="canonical" href="{{ site.url | append: page.url }}">
+
+    <script type="application/ld+json">
+      {% include localbusiness.json %}
+    </script>
+
+    {% if page.description %}
+      <meta name="description" content="{{ page.description }}">
+    {% endif %}
+    {% if page.keywords %}
+      <meta name="keywords" content="{{ page.keywords }}">
+    {% endif %}
+    {% if page.robots %}
+      <meta name="robots" content="{{ page.robots }}">
+    {% endif %}
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url | append: page.url }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:image" content="{{ '/assets/images/og-image.png' | relative_url }}">
+    <meta property="twitter:card" content="summary_large_image">
+    
+    {% if layout.style == 'physio' %}
+      <link rel="stylesheet" href="{{ '/assets/css/physio.css' | relative_url }}">
+    {% elsif layout.style == 'athletik' %}
+      <link rel="stylesheet" href="{{ '/assets/css/athletik.css' | relative_url }}">
+    {% else %}
+      <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+    {% endif %}
+
+    <link rel="icon" href="{{ '/assets/images/logo-box-white.svg' | relative_url }}">
+    <link rel="mask-icon" href="{{ '/assets/images/logo-box-white.svg' | relative_url }}" color="#3CB451">
+    <link rel="apple-touch-icon" href="{{ '/assets/images/apple-touch-icon.png' | relative_url }}">
+  </head>
+
+  <body>
+    {% include header.html %}
+    <main>
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

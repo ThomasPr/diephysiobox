@@ -1,0 +1,72 @@
+
+//$widescreen-enabled: false
+$fullhd-enabled: false
+
+$link: $primary
+$content-heading-color: $primary
+
+$tabs-link-active-border-bottom-color: $primary
+$tabs-link-active-color	: $primary
+$tabs-link-hover-border-bottom-color: $primary
+$tabs-link-hover-color: $primary
+//$tabs-border-bottom-color: rgba($primary, 0.1)
+
+$border: hsl(0, 0%, 86%) // should be the default value
+
+$card-shadow: none
+
+
+.columns-reverse
+  @media screen and (min-width: 769px)
+    flex-direction: row-reverse
+
+.content a:hover
+  text-decoration: underline
+  color: $primary !important
+
+
+.header-teaser
+  height: 50vh
+  margin-top: 3rem
+
+  background-position: center top
+  background-repeat: no-repeat
+  background-size: cover
+
+
+section.page-header
+  background-color: rgba($primary, .1)
+  padding: 1.5rem
+  margin-top: 3rem
+
+  h1, h2
+    color: $primary
+
+.columnize
+  column-width: 320px
+  column-gap: 30px
+  p
+    text-align: justify
+  img.float-left
+    float: left
+    width: 50%
+    padding-right: 15px
+  img.float-right
+    float: right
+    width: 50%
+    padding-left: 15px
+
+
+@import "header"
+@import "footer"
+
+@import "leistungen"
+@import "team"
+@import "kontakt"
+
+@import "bulma/bulma"
+
+$fa-font-path: "/assets/fonts"
+@import "fontawesome/fontawesome"
+@import "fontawesome/solid"
+@import "fontawesome/regular"
